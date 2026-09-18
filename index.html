@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hawaiʻi Co-op Hui</title>
+  <meta name="description" content="A network of people and cooperatives building a regenerative and just Hawaiʻi through shared resources, knowledge, and community ownership.">
+  <meta property="og:title" content="Hawaiʻi Co-op Hui — Stronger Together">
+  <meta property="og:description" content="A network of people and cooperatives building a regenerative and just Hawaiʻi through shared resources, knowledge, and community ownership.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Mulish:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#about">Skip to content</a>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="nav__inner">
+    <a class="brand" href="#top" aria-label="Hawaiʻi Co-op Hui home">
+      <svg class="brand__emblem" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" stroke="#2C5446" stroke-width="2"/>
+        <path d="M14 30l8-10 7 8 6-9 8 11" stroke="#6E9A4E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 40c5 0 5-4 10-4s5 4 10 4 5-4 10-4 5 4 10 4" stroke="#2E8C86" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M12 47c5 0 5-4 10-4s5 4 10 4 5-4 10-4 5 4 10 4" stroke="#2F6E93" stroke-width="2.2" stroke-linecap="round" opacity=".8"/>
+      </svg>
+      <span>
+        <span class="brand__name">HAWAIʻI<br>CO-OP HUI</span>
+        <span class="brand__tag">People · ʻĀina · Waiwai · Together</span>
+      </span>
+    </a>
+
+    <nav aria-label="Primary">
+      <ul class="nav__links" id="navlinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#our-work">Our Work</a></li>
+        <li><a href="#cohort">Co-op Cohort</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#get-involved">Get Involved</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav__cta" style="display:flex;align-items:center;gap:10px">
+      <a class="btn btn--dark" href="#get-involved">Express Interest <span class="arw">&rarr;</span></a>
+      <button class="navtoggle" id="navtoggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" data-todo="hero-photo — set --hero-image in styles.css to url('assets/hero.jpg')">
+    <div class="hero__inner">
+      <div>
+        <p class="hero__eyebrow">E kahe ka wai.</p>
+        <h1>Stronger<br>Together.</h1>
+        <p class="hero__sub">A network of people and cooperatives building a regenerative and just Hawaiʻi through shared resources, knowledge, and community ownership.</p>
+        <a class="btn btn--light" href="#get-involved">Join the Movement <span class="arw">&rarr;</span></a>
+      </div>
+      <aside class="hero__aside" aria-label="Our values">
+        <ul class="hero__words">
+          <li>ʻĀINA</li><li>HANA</li><li>ʻIKE</li><li>WAIWAI</li><li>MEAʻAI</li><li>KAIĀULU</li>
+        </ul>
+        <div class="hero__rule"></div>
+        <p class="hero__tag">Flowing resources.<br>Growing community.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ===================== STATEMENT + WAVES ===================== -->
+  <section id="about" class="statement">
+    <div class="statement__inner">
+      <svg class="wave" viewBox="0 0 640 150" fill="none" aria-hidden="true">
+        <path d="M0 78 C 90 34, 170 118, 260 74 S 440 30, 540 78 620 92 640 84" stroke="#2E8C86" stroke-width="3" stroke-linecap="round"/>
+        <path d="M0 92 C 90 52, 170 128, 260 88 S 440 46, 540 90 620 104 640 96" stroke="#2F6E93" stroke-width="3" stroke-linecap="round"/>
+        <path d="M0 66 C 100 26, 180 104, 270 62 S 450 22, 545 66 622 78 640 72" stroke="#6E9A4E" stroke-width="3" stroke-linecap="round"/>
+        <path d="M0 104 C 100 70, 185 138, 275 100 S 450 64, 548 102 624 114 640 108" stroke="#C1613B" stroke-width="3" stroke-linecap="round"/>
+        <path d="M0 54 C 110 20, 190 92, 285 52 S 460 14, 552 56 626 66 640 60" stroke="#D8A24A" stroke-width="2.4" stroke-linecap="round" opacity=".85"/>
+      </svg>
+      <p class="statement__text">Like the wai that moves from mauka to makai, we believe in an economy where resources circulate, nourish, and return — strengthening our communities for generations to come.</p>
+    </div>
+  </section>
+
+  <!-- ===================== VALUES ===================== -->
+  <section class="values" aria-label="Our values">
+    <div class="values__grid">
+      <div class="value">
+        <span class="value__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 19l6-9 4 5 3-4 5 8z"/></svg></span>
+        <h3>ʻĀina</h3><p>Care for land and more than human kin</p>
+      </div>
+      <div class="value">
+        <span class="value__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"/><path d="M12 13c0-4 3-6 7-6 0 4-3 6-7 6z"/><path d="M12 15c0-3-2-5-6-5 0 3 2 5 6 5z"/></svg></span>
+        <h3>Meaʻai</h3><p>Local food systems and resilient livelihoods</p>
+      </div>
+      <div class="value">
+        <span class="value__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 10c3 0 3-3 6-3s3 3 6 3 3-3 6-3"/><path d="M3 15c3 0 3-3 6-3s3 3 6 3 3-3 6-3"/></svg></span>
+        <h3>Waiwai</h3><p>Keep resources circulating in community</p>
+      </div>
+      <div class="value">
+        <span class="value__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="9" r="2.4"/><circle cx="16" cy="9" r="2.4"/><path d="M3.5 19c0-3 2-4.5 4.5-4.5S12.5 16 12.5 19"/><path d="M11.5 19c0-3 2-4.5 4.5-4.5S20.5 16 20.5 19"/></svg></span>
+        <h3>Kaiāulu</h3><p>Stronger together</p>
+      </div>
+      <div class="value">
+        <span class="value__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V8"/><path d="M12 8c-1-3-4-4-7-4-.5 3 1 6 4 7"/><path d="M12 11c1-3 4-4 7-4 .5 3-1 6-4 7"/></svg></span>
+        <h3>ʻIke</h3><p>Share knowledge and build capacity</p>
+      </div>
+      <div class="value">
+        <span class="value__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 3l9 4.5v9L12 21l-9-4.5v-9L12 3z"/><path d="M12 3v18M3 7.5l18 9M21 7.5l-18 9"/></svg></span>
+        <h3>Hana</h3><p>Cooperative practice and collective action</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COHORT ===================== -->
+  <section id="cohort" class="cohort">
+    <div class="cohort__grid">
+      <div class="cohort__text">
+        <div class="max">
+          <p class="eyebrow eyebrow--light">Hawaiʻi Co-op Cohort</p>
+          <h2>Invitation to Join<br>the Hawaiʻi Co-op Cohort</h2>
+          <p class="cohort__lead">A WSARE grant-supported learning community for folks who are building, strengthening, or supporting agricultural cooperatives across Hawaiʻi.</p>
+          <div class="facts">
+            <div class="fact">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
+              <p><strong>December 2026 – November 2027</strong></p>
+            </div>
+            <div class="fact">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 5.5a3 3 0 010 5.5M18 20c0-2.5-1-4.5-3-5.5"/></svg>
+              <p>Monthly virtual sessions + in-person workshops on Hawaiʻi Island, Molokaʻi, Oʻahu and Maui</p>
+            </div>
+            <div class="fact">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4-2-8-5-8-10a4 4 0 018-1 4 4 0 018 1c0 5-4 8-8 10z"/></svg>
+              <p>For producers, co-op members and leaders, emerging co-ops, and cooperative development practitioners</p>
+            </div>
+          </div>
+          <div class="cohort__actions">
+            <a class="btn btn--light" href="#get-involved">Express Interest <span class="arw">&rarr;</span></a>
+            <a class="textlink textlink--light" href="#resources">Learn more about the cohort &darr;</a>
+          </div>
+        </div>
+      </div>
+      <div class="cohort__media" data-todo="cohort-photo — kalo planting; set as background-image">
+        <span class="imgnote">Photo placeholder</span>
+        <div class="script">He ʻĀina<br>He Lāhui<br>He Waiwai</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OUR WORK ===================== -->
+  <section id="our-work" class="work">
+    <div class="wrap work__grid">
+      <div class="work__intro">
+        <p class="eyebrow">Our Work</p>
+        <h2>Strengthening an ecosystem of cooperatives across Hawaiʻi</h2>
+        <p>The Hawaiʻi Co-op Hui connects people, organizations, and resources to grow a thriving cooperative economy rooted in ʻāina, culture, and community self-determination.</p>
+        <a class="btn btn--dark" href="#about">About Our Work <span class="arw">&rarr;</span></a>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card__img"><span>Photo</span></div>
+          <div class="card__body">
+            <h3>Learn</h3>
+            <p>Build cooperative literacy, skills, and leadership.</p>
+            <a class="textlink" href="#resources">See our programs &rarr;</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><span>Photo</span></div>
+          <div class="card__body">
+            <h3>Connect</h3>
+            <p>Strengthen pilina across the pae ʻāina.</p>
+            <a class="textlink" href="#get-involved">Meet our network &rarr;</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><span>Photo</span></div>
+          <div class="card__body">
+            <h3>Build</h3>
+            <p>Support real projects, infrastructure, and community ownership.</p>
+            <a class="textlink" href="#get-involved">Get involved &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESOURCES / RECORDINGS ===================== -->
+  <section id="resources" class="resources">
+    <div class="wrap">
+      <div class="resources__head">
+        <p class="eyebrow">Resources</p>
+        <h2>Session recordings &amp; resources</h2>
+        <p>Recordings of virtual sessions and in-person workshops, gathered in one place for the cohort and community.</p>
+      </div>
+      <div class="rec">
+        <!-- To publish a recording, replace the placeholder .rec__media with an embed:
+             <div class="rec__media"><iframe src="https://www.youtube.com/embed/VIDEO_ID"
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+               allowfullscreen title="Session title"></iframe></div>
+             (Vimeo: https://player.vimeo.com/video/VIDEO_ID) -->
+        <article class="rec__card">
+          <div class="rec__media"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></div>
+          <div class="rec__body"><span class="rec__tag">Virtual · Session 01</span><h3>Welcome &amp; orientation</h3><p>Kick-off gathering and an intro to the cohort journey.</p></div>
+        </article>
+        <article class="rec__card">
+          <div class="rec__media"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></div>
+          <div class="rec__body"><span class="rec__tag">Workshop</span><h3>Coming soon</h3><p>In-person workshop recordings will be posted here.</p></div>
+        </article>
+        <article class="rec__card">
+          <div class="rec__media"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></div>
+          <div class="rec__body"><span class="rec__tag">Virtual · Session 02</span><h3>Coming soon</h3><p>This recording will appear after the session.</p></div>
+        </article>
+      </div>
+      <p class="note"><strong>Send me the video links</strong> (YouTube or Vimeo) as sessions happen and I'll drop in the public embeds — the exact spot is marked in the section's HTML.</p>
+    </div>
+  </section>
+
+  <!-- ===================== GET INVOLVED CTA ===================== -->
+  <section id="get-involved" class="cta">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--light">Get Involved</p>
+      <h2>Join the movement</h2>
+      <p>Whether you're building a co-op, supporting one, or want to learn — there's a place for you in the hui. Express interest and we'll be in touch.</p>
+      <div class="cta__actions">
+        <a class="btn btn--light" href="#" data-todo="express-interest-link">Express Interest <span class="arw">&rarr;</span></a>
+        <a class="btn btn--outline-light" href="#resources">Explore resources</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <p class="footer__quote">"When the resources flow, the people flourish."</p>
+      <p class="footer__sub">E kahe ka wai, e ola ke kaiāulu.</p>
+    </div>
+    <div class="footer__brand">
+      <span>
+        <span class="brand__name">HAWAIʻI CO-OP HUI</span>
+        <span class="brand__tag">People · ʻĀina · Waiwai · Together</span>
+      </span>
+      <svg class="footer__emblem" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" stroke="#F1ECDF" stroke-width="2"/>
+        <path d="M14 30l8-10 7 8 6-9 8 11" stroke="#F1ECDF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 40c5 0 5-4 10-4s5 4 10 4 5-4 10-4 5 4 10 4" stroke="#F1ECDF" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M12 47c5 0 5-4 10-4s5 4 10 4 5-4 10-4 5 4 10 4" stroke="#F1ECDF" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+      </svg>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

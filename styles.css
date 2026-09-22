@@ -36,6 +36,7 @@
      Watkins & Rugpull aren't web-hosted; Playfair Display stands in for the
      display face until the licensed fonts are self-hosted. Inter is exact. */
   --font-display:"Playfair Display", Georgia, "Times New Roman", serif;
+  --font-brand:"Bricolage Grotesque", "Inter", system-ui, sans-serif; /* stands in for Watkins (logo/wordmark) */
   --font-body:"Inter", system-ui, -apple-system, sans-serif;
   --font-script:"Caveat", "Segoe Script", cursive;
   /* drop-in hero image goes here when available */
@@ -83,16 +84,15 @@ p{margin:0}
 .textlink--light{color:var(--on-forest)}
 
 /* ---------- Nav ---------- */
-.nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--cream) 90%,transparent);
-  backdrop-filter:saturate(1.3) blur(10px);border-bottom:1px solid var(--line)}
-.nav__inner{max-width:var(--maxw);margin:0 auto;padding:14px 28px;display:flex;
+.nav{position:sticky;top:0;z-index:60;background:var(--cream);border-bottom:1px solid var(--line)}
+.nav__inner{max-width:var(--maxw);margin:0 auto;padding:12px 28px;display:flex;
   align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--forest)}
-.brand__emblem{width:46px;height:46px;flex:none}
-.brand__name{font-family:var(--font-display);font-weight:700;font-size:1.05rem;line-height:1;
-  letter-spacing:.01em}
-.brand__tag{font-family:var(--font-body);font-size:.54rem;font-weight:700;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--muted);margin-top:5px}
+.brand{display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--forest)}
+.brand__emblem{width:54px;height:54px;flex:none}
+.brand__name{font-family:var(--font-brand);font-weight:800;font-size:clamp(1.15rem,3.4vw,1.5rem);
+  line-height:.98;letter-spacing:.005em;text-transform:uppercase;white-space:nowrap;color:var(--forest)}
+.brand__tag{font-family:var(--font-body);font-size:.53rem;font-weight:700;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--muted);margin-top:5px;white-space:nowrap}
 .nav__links{display:flex;align-items:center;gap:6px;list-style:none;margin:0;padding:0}
 .nav__links a{text-decoration:none;font-size:.82rem;font-weight:600;letter-spacing:.02em;
   color:var(--ink);opacity:.8;padding:8px 12px;border-radius:8px;transition:opacity .15s,background .15s}
@@ -160,6 +160,18 @@ p{margin:0}
 .value p{font-size:.88rem;color:var(--muted);max-width:20ch}
 @media (max-width:900px){.values__grid{grid-template-columns:repeat(3,1fr);gap:28px}}
 @media (max-width:520px){.values__grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- Why a co-op ---------- */
+.whyco{background:var(--paper);padding-block:clamp(56px,8vw,96px);border-top:1px solid var(--line)}
+.whyco__head{max-width:660px;margin-bottom:2.6rem}
+.whyco h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:.9rem}
+.whyco__lead{color:var(--muted);font-size:1.12rem;max-width:56ch}
+.whyco__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.whyco__item{border-top:2px solid var(--pine);padding-top:16px}
+.whyco__item h3{font-family:var(--font-body);font-weight:800;font-size:.8rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--pine);margin-bottom:.5rem}
+.whyco__item p{color:var(--muted);font-size:.98rem}
+@media (max-width:760px){.whyco__grid{grid-template-columns:1fr;gap:20px}}
 
 /* ---------- Cohort (dark, two-column) ---------- */
 .cohort{background:var(--forest);color:var(--on-forest);position:relative;overflow:hidden}

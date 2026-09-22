@@ -33,10 +33,18 @@ The mockup uses real photography that isn't in this repo yet — placeholders ar
 - Final **logo** — swap the inline SVG emblem in the nav + footer
 - Copy review — cohort dates (Dec 2026 – Nov 2027) and all Hawaiian text/ʻokina/kahakō
 
-## Brand tokens
-Colors, fonts, and radii are CSS custom properties in `:root`. Fonts load from Google Fonts
-(Playfair Display / Mulish / Caveat) — change the `<link>` in `index.html` and the
-`--font-*` tokens together if the type changes.
+## Brand (from the official Hawaiʻi Co-op Hui Brand Guidelines)
+Applied from the guidelines PDF:
+- **Palette** (CSS tokens in `:root`): Parchment `#fff2ea/#f3e4d7/#d3bdab`, Spectra deep-teal
+  `#113137` (dark grounds), Jungle Green `#0a7473/#22a09d` (primary accent), plus Rocky rust
+  `#ae562c`, Pixie olive `#8a9140`, Shadow `#a5783c` used across the wave motif.
+- **Logo**: the real emblem is in `assets/emblem-light.png` (nav, on parchment) and
+  `assets/emblem-dark.png` (footer, on Spectra); `assets/favicon.png` is the tab icon. These
+  were extracted from the brand PDF — replace with official exported PNG/SVG when available.
+- **Type**: body is **Inter** (brand-exact, Google Fonts). The display face is **Watkins** and
+  the secondary is **Rugpull** — neither is web-hosted, so **Playfair Display stands in for the
+  display face** for now. To go exact, self-host Watkins/Rugpull (`@font-face`) and update the
+  `--font-display` token + the Google Fonts `<link>`.
 
 ## Deploy
 Any static host: Netlify/Vercel (drag-and-drop the folder or connect the repo), or GitHub Pages.

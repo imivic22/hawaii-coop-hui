@@ -6,31 +6,37 @@
    Brand tokens live in :root — swap them if the identity shifts.
    ============================================================ */
 :root{
-  /* neutrals — warm cream ground */
-  --cream:#F1ECDF;
-  --cream-2:#E9E2D1;
-  --paper:#FBF8F0;
-  /* greens */
-  --forest:#1E3A31;        /* deep sections + footer */
-  --forest-2:#264B3F;
-  --pine:#2C5446;          /* buttons, headings on cream */
-  --ink:#20302A;           /* body text on cream */
-  --muted:#5C6B62;
-  --line:#D8D0BE;
-  --line-dark:rgba(241,236,223,.16);
-  /* wave accents */
-  --wai-teal:#2E8C86;
-  --wai-blue:#2F6E93;
-  --wai-rust:#C1613B;
-  --wai-leaf:#6E9A4E;
-  --wai-gold:#D8A24A;
-  --accent:#C1613B;        /* rust — sparing accent */
-  --on-forest:#F1ECDF;
-  --on-forest-muted:rgba(241,236,223,.72);
-  --shadow:0 1px 2px rgba(30,58,49,.06), 0 14px 34px rgba(30,58,49,.10);
+  /* ---- Brand palette (Hawaiʻi Co-op Hui guidelines) ---- */
+  /* Parchment */
+  --cream:#fff2ea;         /* page ground */
+  --cream-2:#f3e4d7;
+  --paper:#fffaf4;         /* cards */
+  --line:#d3bdab;
+  /* Spectra — deep-teal grounds (footer, cohort, CTA) */
+  --forest:#113137;
+  --forest-2:#173f3d;
+  --ink:#12312d;           /* body text on cream */
+  --muted:#5f6f66;
+  /* Jungle Green — primary accent (headings, icons, links on cream) */
+  --pine:#0a7473;
+  --jungle:#22a09d;
+  --line-dark:rgba(255,242,234,.16);
+  /* wave / accent palette — brand swatches */
+  --wai-teal:#22a09d;      /* Jungle Green */
+  --wai-blue:#2e6d75;      /* Spectra */
+  --wai-rust:#ae562c;      /* Rocky */
+  --wai-leaf:#8a9140;      /* Pixie */
+  --wai-gold:#a5783c;      /* Shadow */
+  --accent:#ae562c;        /* Rocky rust — sparing accent */
+  --on-forest:#fff2ea;
+  --on-forest-muted:rgba(255,242,234,.74);
+  --shadow:0 1px 2px rgba(17,49,55,.06), 0 14px 34px rgba(17,49,55,.10);
   --maxw:1200px;
+  /* Type — brand: Watkins (display) / Rugpull (secondary) / Inter (body).
+     Watkins & Rugpull aren't web-hosted; Playfair Display stands in for the
+     display face until the licensed fonts are self-hosted. Inter is exact. */
   --font-display:"Playfair Display", Georgia, "Times New Roman", serif;
-  --font-body:"Mulish", system-ui, -apple-system, sans-serif;
+  --font-body:"Inter", system-ui, -apple-system, sans-serif;
   --font-script:"Caveat", "Segoe Script", cursive;
   /* drop-in hero image goes here when available */
   --hero-image:none;
@@ -108,9 +114,9 @@ p{margin:0}
 /* ---------- Hero ---------- */
 .hero{position:relative;color:var(--on-forest);isolation:isolate;
   background:
-    linear-gradient(180deg, rgba(20,40,33,.55), rgba(20,40,33,.35) 40%, rgba(20,40,33,.75)),
+    linear-gradient(180deg, rgba(17,49,55,.52), rgba(17,49,55,.34) 40%, rgba(9,28,29,.78)),
     var(--hero-image),
-    radial-gradient(120% 80% at 75% 20%, #3a6d54, #17352a 70%);
+    radial-gradient(120% 85% at 78% 15%, #1e6f6a, #0c2a2e 68%);
   background-size:cover;background-position:center}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;
   background:url("assets/topo.svg");background-size:900px;mix-blend-mode:soft-light}
@@ -169,7 +175,7 @@ p{margin:0}
 .fact strong{color:var(--on-forest);font-weight:700}
 .cohort__actions{display:flex;flex-wrap:wrap;gap:16px 22px;align-items:center}
 .cohort__media{position:relative;min-height:420px;
-  background:linear-gradient(120deg,#2a4a3b,#12291f), radial-gradient(80% 80% at 30% 20%,#3c6b4f,transparent);
+  background:linear-gradient(120deg,#1c5a52,#0d2a2e), radial-gradient(80% 80% at 30% 20%,#22a09d,transparent);
   background-size:cover;background-position:center}
 .cohort__media .script{position:absolute;right:26px;bottom:26px;font-family:var(--font-script);
   font-size:2rem;line-height:1.1;color:#fff;text-align:right;text-shadow:0 2px 12px rgba(0,0,0,.5)}

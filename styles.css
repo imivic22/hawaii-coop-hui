@@ -33,14 +33,17 @@
   --shadow:0 1px 2px rgba(17,49,55,.06), 0 14px 34px rgba(17,49,55,.10);
   --maxw:1200px;
   /* Type — brand: Watkins (display) / Rugpull (secondary) / Inter (body).
-     Watkins & Rugpull aren't web-hosted; Playfair Display stands in for the
-     display face until the licensed fonts are self-hosted. Inter is exact. */
+     The Watkins wordmark ships as outlined paths inside the official logo SVGs
+     (assets/brand/), so nothing stands in for it there. Watkins/Rugpull aren't
+     web-hosted; Playfair Display stands in for headline display until the
+     licensed fonts are self-hosted. Inter is exact. */
   --font-display:"Playfair Display", Georgia, "Times New Roman", serif;
-  --font-brand:"Bricolage Grotesque", "Inter", system-ui, sans-serif; /* stands in for Watkins (logo/wordmark) */
   --font-body:"Inter", system-ui, -apple-system, sans-serif;
   --font-script:"Caveat", "Segoe Script", cursive;
   /* drop-in hero image goes here when available */
   --hero-image:none;
+  --lockup-h:64px;                              /* height of the logo lockup in the nav */
+  --pattern:url("assets/brand/pattern.svg");    /* official seamless brand pattern (transparent) */
 }
 
 *{box-sizing:border-box}
@@ -87,12 +90,17 @@ p{margin:0}
 .nav{position:sticky;top:0;z-index:60;background:var(--cream);border-bottom:1px solid var(--line)}
 .nav__inner{max-width:var(--maxw);margin:0 auto;padding:12px 28px;display:flex;
   align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--forest)}
-.brand__emblem{width:54px;height:54px;flex:none}
-.brand__name{font-family:var(--font-brand);font-weight:800;font-size:clamp(1.15rem,3.4vw,1.5rem);
-  line-height:.98;letter-spacing:.005em;text-transform:uppercase;white-space:nowrap;color:var(--forest)}
+/* Logo lockup. Proportions come from the official Secondary Logo (267.79 x 101.11):
+   emblem 109.15 wide, gap 17.42, wordmark 54.10 tall starting at x=126.57. All are
+   expressed as fractions of the lockup height so nav and footer scale together. */
+.brand{display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-decoration:none;color:var(--forest)}
+.brand__lockup{display:flex;align-items:center;height:var(--lockup-h);gap:calc(var(--lockup-h) * .1723)}
+.brand__emblem{height:var(--lockup-h);width:auto;flex:none}
+.brand__wordmark{height:calc(var(--lockup-h) * .535);width:auto;flex:none}
+.brand__logo{height:var(--lockup-h);width:auto;flex:none}          /* intact official lockup (footer) */
 .brand__tag{font-family:var(--font-body);font-size:.53rem;font-weight:700;letter-spacing:.15em;
-  text-transform:uppercase;color:var(--muted);margin-top:5px;white-space:nowrap}
+  text-transform:uppercase;color:var(--muted);white-space:nowrap;
+  margin-left:calc(var(--lockup-h) * 1.252)}                        /* sits under the wordmark */
 .nav__links{display:flex;align-items:center;gap:6px;list-style:none;margin:0;padding:0}
 .nav__links a{text-decoration:none;font-size:.82rem;font-weight:600;letter-spacing:.02em;white-space:nowrap;
   color:var(--ink);opacity:.8;padding:8px 12px;border-radius:8px;transition:opacity .15s,background .15s}
@@ -118,8 +126,8 @@ p{margin:0}
     var(--hero-image),
     radial-gradient(120% 85% at 78% 15%, #1e6f6a, #0c2a2e 68%);
   background-size:cover;background-position:center}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;
-  background:url("assets/topo.svg");background-size:900px;mix-blend-mode:soft-light}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.28;
+  background:var(--pattern);background-size:420px;mix-blend-mode:soft-light}
 .hero__inner{max-width:var(--maxw);margin:0 auto;padding:96px 28px 84px;
   display:grid;grid-template-columns:1.55fr .8fr;gap:48px;align-items:center;min-height:min(78vh,720px)}
 .hero__eyebrow{font-family:var(--font-body);font-size:.74rem;font-weight:700;letter-spacing:.24em;
@@ -152,9 +160,8 @@ p{margin:0}
   display:grid;grid-template-columns:repeat(6,1fr);gap:22px;
   border-top:1px solid var(--line);padding-top:clamp(40px,6vw,64px)}
 .value{text-align:center;display:flex;flex-direction:column;align-items:center;gap:.5rem}
-.value__icon{width:64px;height:64px;border-radius:50%;border:1.5px solid var(--pine);
-  display:grid;place-items:center;color:var(--pine)}
-.value__icon svg{width:30px;height:30px}
+.value__icon{width:76px;height:76px;border-radius:50%;display:block;
+  filter:drop-shadow(0 6px 14px rgba(17,49,55,.10))}
 .value h3{font-family:var(--font-body);font-weight:800;font-size:.82rem;letter-spacing:.14em;
   text-transform:uppercase;color:var(--forest);margin-top:.3rem}
 .value p{font-size:.88rem;color:var(--muted);max-width:20ch}
@@ -186,9 +193,11 @@ p{margin:0}
 .fact p{color:var(--on-forest-muted);font-size:.98rem}
 .fact strong{color:var(--on-forest);font-weight:700}
 .cohort__actions{display:flex;flex-wrap:wrap;gap:16px 22px;align-items:center}
-.cohort__media{position:relative;min-height:420px;
+.cohort__media{position:relative;min-height:420px;isolation:isolate;
   background:linear-gradient(120deg,#1c5a52,#0d2a2e), radial-gradient(80% 80% at 30% 20%,#22a09d,transparent);
   background-size:cover;background-position:center}
+.cohort__media::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.32;
+  background:var(--pattern);background-size:360px;mix-blend-mode:soft-light}
 .cohort__media .script{position:absolute;right:26px;bottom:26px;font-family:var(--font-script);
   font-size:2rem;line-height:1.1;color:#fff;text-align:right;text-shadow:0 2px 12px rgba(0,0,0,.5)}
 .imgnote{position:absolute;left:16px;top:16px;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
@@ -204,7 +213,8 @@ p{margin:0}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;
   display:flex;flex-direction:column}
-.card__img{aspect-ratio:4/3;background:linear-gradient(135deg,var(--cream-2),#c9d3bd);position:relative}
+.card__img{aspect-ratio:4/3;position:relative;
+  background:linear-gradient(rgba(255,242,234,.38),rgba(255,242,234,.38)), var(--pattern) center/300px, var(--cream-2)}
 .card__img span{position:absolute;left:10px;top:10px;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;
   background:rgba(30,58,49,.6);color:#fff;padding:4px 7px;border-radius:5px}
 .card__body{padding:18px 18px 22px;display:flex;flex-direction:column;gap:.5rem;flex:1}
@@ -245,18 +255,16 @@ p{margin:0}
 /* ---------- Footer ---------- */
 .footer{background:var(--forest);color:var(--on-forest);position:relative;overflow:hidden;
   padding-block:clamp(44px,6vw,72px)}
-.footer::before{content:"";position:absolute;inset:0;opacity:.35;
-  background:url("assets/topo.svg");background-size:800px;mix-blend-mode:soft-light}
+.footer::before{content:"";position:absolute;inset:0;opacity:.26;
+  background:var(--pattern);background-size:400px;mix-blend-mode:soft-light}
 .footer__inner{position:relative;max-width:var(--maxw);margin:0 auto;padding-inline:28px;
   display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
 .footer__quote{font-family:var(--font-display);font-style:italic;font-size:clamp(1.3rem,2.6vw,1.9rem);color:#fff;max-width:20ch}
 .footer__sub{font-family:var(--font-body);font-size:.68rem;font-weight:700;letter-spacing:.2em;
   text-transform:uppercase;color:var(--on-forest-muted);margin-top:1rem;display:flex;align-items:center;gap:12px}
 .footer__sub::before{content:"";width:36px;height:1.5px;background:var(--on-forest-muted)}
-.footer__brand{display:flex;align-items:center;gap:14px;text-align:right}
-.footer__brand .brand__name{color:#fff}
+.footer__brand{--lockup-h:68px;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
 .footer__brand .brand__tag{color:var(--on-forest-muted)}
-.footer__emblem{width:58px;height:58px;flex:none}
 
 /* ---------- a11y ---------- */
 .skip{position:absolute;left:-9999px}

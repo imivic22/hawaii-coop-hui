@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Companion icon for ʻIke (knowledge), built to match the official brand icon
+     construction: solid brand-color circle, thin darker ring, dark line art.
+     Colors: Jungle Green #22a09d / #074948. Replace with the official icon if one is made. -->
+<svg id="Icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 237.31 237.16">
+  <defs>
+    <style>
+      .cls-1 { fill: #22a09d; }
+      .cls-2 { fill: none; stroke: #074948; stroke-width: 5.6; stroke-linecap: round; stroke-linejoin: round; }
+      .cls-3 { fill: none; stroke: #074948; stroke-width: 2.6; }
+    </style>
+  </defs>
+  <g id="_ʻIke" data-name="ʻIke">
+    <circle class="cls-1" cx="118.66" cy="118.58" r="118.5"/>
+    <circle class="cls-3" cx="118.66" cy="118.58" r="113.2"/>
+    <!-- open book -->
+    <path class="cls-2" d="M118.66,101.5 C101,89.5 78,87.5 57.5,93.5 L57.5,158 C78,152 101,154 118.66,166 Z"/>
+    <path class="cls-2" d="M118.66,101.5 C136.3,89.5 159.3,87.5 179.8,93.5 L179.8,158 C159.3,152 136.3,154 118.66,166 Z"/>
+    <path class="cls-2" d="M118.66,101.5 L118.66,166"/>
+    <!-- text lines -->
+    <path class="cls-2" d="M71,112 C84,108.5 97,108.5 108,111.5"/>
+    <path class="cls-2" d="M71,128 C84,124.5 97,124.5 108,127.5"/>
+    <path class="cls-2" d="M129.3,111.5 C140.3,108.5 153.3,108.5 166.3,112"/>
+    <path class="cls-2" d="M129.3,127.5 C140.3,124.5 153.3,124.5 166.3,128"/>
+    <!-- light of knowledge -->
+    <path class="cls-2" d="M118.66,78 L118.66,70"/>
+    <path class="cls-2" d="M101,84.5 L96,78.5"/>
+    <path class="cls-2" d="M136.3,84.5 L141.3,78.5"/>
+  </g>
+</svg>

@@ -7,7 +7,7 @@ Plain static HTML/CSS/JS — no build step, no dependencies.
 - `index.html` — all page content and structure
 - `styles.css` — all styling; **brand tokens live at the top in `:root`**
 - `script.js` — mobile menu + active-section nav highlight
-- `assets/` — `topo.svg` (background texture); add logo, hero/section photos here
+- `assets/brand/` — official logos, icons, and seamless pattern (SVG); `assets/` — favicon, og-image; add hero/section photos here
 
 ## Run locally
 ```bash
@@ -38,9 +38,15 @@ Applied from the guidelines PDF:
 - **Palette** (CSS tokens in `:root`): Parchment `#fff2ea/#f3e4d7/#d3bdab`, Spectra deep-teal
   `#113137` (dark grounds), Jungle Green `#0a7473/#22a09d` (primary accent), plus Rocky rust
   `#ae562c`, Pixie olive `#8a9140`, Shadow `#a5783c` used across the wave motif.
-- **Logo**: the real emblem is in `assets/emblem-light.png` (nav, on parchment) and
-  `assets/emblem-dark.png` (footer, on Spectra); `assets/favicon.png` is the tab icon. These
-  were extracted from the brand PDF — replace with official exported PNG/SVG when available.
+- **Logo & assets** (`assets/brand/`, from the official Brand Package, all transparent SVG):
+  `logo-primary*.svg` (stacked), `logo-secondary*.svg` (horizontal; Original Color is meant
+  for dark backgrounds — "HAWAIʻI" is cream), `emblem*.svg` (the favicon mark), `icon-*.svg`,
+  and `pattern.svg` (the seamless brand pattern with its parchment background removed so it
+  tiles over any color). The nav pairs the full-color emblem with the Watkins wordmark
+  cropped (viewBox only, no path edits) from the all-dark Spectra lockup, at the Secondary
+  Logo's own proportions; the footer uses the Parchment lockup intact. `icon-ike.svg` and
+  `icon-hana.svg` are companion icons built in the official icon construction — swap in
+  official ones if they get made. `favicon.png` / `og-image.png` are downsized from the package.
 - **Type**: body is **Inter** (brand-exact, Google Fonts). The display face is **Watkins** and
   the secondary is **Rugpull** — neither is web-hosted, so **Playfair Display stands in for the
   display face** for now. To go exact, self-host Watkins/Rugpull (`@font-face`) and update the

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Companion line-art icon for ʻIke (knowledge): open book with a spark of light, matching the official icons' ring weight. Replace if an official icon is made. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 237.31 237.16">
+  <circle cx="118.66" cy="118.58" r="114.1" fill="none" stroke="#0a7473" stroke-width="9.1"/>
+  <g fill="none" stroke="#0a7473" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M118.66,104 C102,92.5 80,90.5 60.5,96.5 L60.5,158 C80,152 102,154 118.66,165.5 Z"/>
+    <path d="M118.66,104 C135.3,92.5 157.3,90.5 176.8,96.5 L176.8,158 C157.3,152 135.3,154 118.66,165.5 Z"/>
+    <path d="M118.66,104 L118.66,165.5"/>
+    <path d="M74,114 C86,110.8 98,110.8 108,113.5"/>
+    <path d="M74,129 C86,125.8 98,125.8 108,128.5"/>
+    <path d="M129.3,113.5 C139.3,110.8 151.3,110.8 163.3,114"/>
+    <path d="M129.3,128.5 C139.3,125.8 151.3,125.8 163.3,129"/>
+    <path d="M118.66,84 L118.66,74"/>
+    <path d="M100.5,89.5 L94.5,82.5"/>
+    <path d="M136.8,89.5 L142.8,82.5"/>
+  </g>
+</svg>

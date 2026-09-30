@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Companion line-art icon for Hana (cooperative practice): a throw net (ʻupena) — round net edge filled with fine diamond mesh, matching the official icons' ring weight. Replace if an official icon is made. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 237.31 237.16">
+  <defs><clipPath id="net"><circle cx="118.66" cy="118.58" r="60"/></clipPath></defs>
+  <circle cx="118.66" cy="118.58" r="114.1" fill="none" stroke="#0a7473" stroke-width="9.1"/>
+  <g clip-path="url(#net)" fill="none" stroke="#0a7473" stroke-width="3.2" stroke-linecap="round">
+    <path d="M-2,118.58 L118.66,-2.08 M18,138.58 L138.66,17.92 M38,158.58 L158.66,37.92 M58,178.58 L178.66,57.92 M78,198.58 L198.66,77.92 M98,218.58 L218.66,97.92 M118,238.58 L238.66,117.92"/>
+    <path d="M-2,118.58 L118.66,239.24 M18,98.58 L138.66,219.24 M38,78.58 L158.66,199.24 M58,58.58 L178.66,179.24 M78,38.58 L198.66,159.24 M98,18.58 L218.66,139.24 M118,-1.42 L238.66,119.24"/>
+  </g>
+  <circle cx="118.66" cy="118.58" r="60" fill="none" stroke="#0a7473" stroke-width="5.5"/>
+</svg>

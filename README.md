@@ -52,5 +52,30 @@ Applied from the guidelines PDF:
   display face** for now. To go exact, self-host Watkins/Rugpull (`@font-face`) and update the
   `--font-display` token + the Google Fonts `<link>`.
 
+## Content, form, and what still needs team sign-off
+The expanded copy (Why a co-op, What a co-op can look like, Solidarity economy, Cohort
+"aiming for / how we imagine the year / who it's for", FAQ, Start-here links) was drafted from
+three references Keoni shared — Democracy at Work Institute's "What is a Worker Cooperative?",
+New Economy Coalition's "The Solidarity Economy", and the Upstream podcast "Worker Cooperatives
+Pt. 1" — and fact-checked so it states nothing about the program beyond the known facts.
+It deliberately avoids: cost, stipends, deadlines, application/selection process, session dates,
+participant numbers, staff names, partners beyond the WSARE grant, statistics, and real Hawaiʻi
+co-ops (the four examples are labeled "Imagined example").
+
+**Express Interest form** posts to Formspree (`https://formspree.io/f/xvkgydze`, free tier,
+notifications to kaimi@purplemaia.org). Handler in `script.js`: background submit, inline
+"Mahalo" state, honeypot (`_gotcha`), and a mailto fallback if the action is ever unset.
+Formspree emails an ownership confirmation on the very first submission — confirm it once.
+
+**Open for team sign-off before wider promotion:**
+1. Audience scope — copy says farmers, ranchers, growers; add fishers / value-added food makers if in scope.
+2. Solidarity-economy framing — confirm the Hui identifies with it (lead currently says "a name many people use").
+3. "How we imagine the year" (Ground / Learn / Connect / Build) is a proposed arc labeled "a rough shape, not a schedule" — replace with the real plan when it exists.
+4. Post-cohort access — copy says the Hui is a network and the cohort is one way in; nothing promised beyond that.
+5. Who monitors the form inbox; whether an updates list/newsletter will exist (checkbox is plain email consent).
+6. Privacy note says data isn't sold or shared — adjust if WSARE reporting uses participant data.
+7. WSARE is not expanded; confirm the full grant name before adding it.
+8. Brand line "E kahe ke waiwai" uses *ke* before a w-word (standard would be *ka*) — from the guidelines, so left as-is unless the team wants it changed.
+
 ## Deploy
 Any static host: Netlify/Vercel (drag-and-drop the folder or connect the repo), or GitHub Pages.

@@ -49,3 +49,54 @@
     if (el) obs.observe(el);
   });
 })();
+
+// Express Interest form — posts to Formspree in the background and shows an inline
+// success state. Until a real Formspree ID is set on the form's action, the button
+// falls back to a prefilled email so it still works.
+(function () {
+  var form = document.getElementById('interest-form');
+  if (!form) return;
+  var status = form.querySelector('.form__status');
+  var success = document.getElementById('interest-success');
+  var btn = form.querySelector('button[type="submit"]');
+  var fallback = form.getAttribute('data-fallback-email') || '';
+  var configured = /formspree\.io\/f\/[a-z0-9]+$/i.test(form.action) && form.action.indexOf('YOUR_FORM_ID') === -1;
+
+  function showError(msg) {
+    status.textContent = msg;
+    status.hidden = false;
+    btn.disabled = false;
+  }
+
+  form.addEventListener('submit', function (e) {
+    if (!form.checkValidity()) return; // let the browser show its validation messages
+
+    if (!configured) {
+      e.preventDefault();
+      var lines = [];
+      new FormData(form).forEach(function (v, k) {
+        if (k.charAt(0) !== '_' && String(v).trim()) lines.push(k + ': ' + v);
+      });
+      window.location.href = 'mailto:' + fallback +
+        '?subject=' + encodeURIComponent('Express interest — Hawaiʻi Co-op Hui') +
+        '&body=' + encodeURIComponent(lines.join('\n'));
+      return;
+    }
+
+    if (!window.fetch) return; // very old browser: plain POST to Formspree's own thank-you page
+    e.preventDefault();
+    btn.disabled = true;
+    status.hidden = true;
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        form.hidden = true;
+        success.hidden = false;
+        success.setAttribute('tabindex', '-1');
+        success.focus();
+      })
+      .catch(function () {
+        showError('Something went wrong sending that. Please try again' + (fallback ? ', or email ' + fallback : '') + '.');
+      });
+  });
+})();

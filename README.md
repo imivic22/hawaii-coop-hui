@@ -44,9 +44,10 @@ Applied from the guidelines PDF:
   and `pattern.svg` (the seamless brand pattern with its parchment background removed so it
   tiles over any color). The nav pairs the full-color emblem with the Watkins wordmark
   cropped (viewBox only, no path edits) from the all-dark Spectra lockup, at the Secondary
-  Logo's own proportions; the footer uses the Parchment lockup intact. `icon-ike.svg` and
-  `icon-hana.svg` are companion icons built in the official icon construction — swap in
-  official ones if they get made. `favicon.png` / `og-image.png` are downsized from the package.
+  Logo's own proportions; the footer uses the Parchment lockup intact. The values row uses
+  `line-*.svg`: outlined single-color versions made from each official icon's own dark layer
+  (its ring plus line drawing); `line-ike.svg` and `line-hana.svg` are companion icons in the
+  same style — swap in official ones if they get made. `favicon.png` / `og-image.png` are downsized from the package.
 - **Type**: body is **Inter** (brand-exact, Google Fonts). The display face is **Watkins** and
   the secondary is **Rugpull** — neither is web-hosted, so **Playfair Display stands in for the
   display face** for now. To go exact, self-host Watkins/Rugpull (`@font-face`) and update the

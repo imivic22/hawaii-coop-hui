@@ -75,7 +75,7 @@
       e.preventDefault();
       var lines = [];
       new FormData(form).forEach(function (v, k) {
-        if (k.charAt(0) !== '_' && String(v).trim()) lines.push(k + ': ' + v);
+        if (k.charAt(0) !== '_' && String(v).trim()) lines.push(k.replace(/\[\]$/, '') + ': ' + v);
       });
       window.location.href = 'mailto:' + fallback +
         '?subject=' + encodeURIComponent('Express interest — Hawaiʻi Co-op Hui') +

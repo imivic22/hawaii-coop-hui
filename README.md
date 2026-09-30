@@ -55,7 +55,7 @@ Applied from the guidelines PDF:
 
 ## Content, form, and what still needs team sign-off
 The expanded copy (Why a co-op, What a co-op can look like, Cohort "aiming for / how we
-imagine the year / who it's for", Start-here links) was drafted from
+imagine the year / who it's for", Resources links) was drafted from
 three references Keoni shared — Democracy at Work Institute's "What is a Worker Cooperative?",
 New Economy Coalition's "The Solidarity Economy", and the Upstream podcast "Worker Cooperatives
 Pt. 1" — and fact-checked so it states nothing about the program beyond the known facts.

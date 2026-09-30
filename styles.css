@@ -198,8 +198,9 @@ p{margin:0}
   background-size:cover;background-position:center}
 .cohort__media::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.32;
   background:var(--pattern);background-size:360px;mix-blend-mode:soft-light}
-.cohort__media .script{position:absolute;right:26px;bottom:26px;font-family:var(--font-script);
-  font-size:2rem;line-height:1.1;color:#fff;text-align:right;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.cohort__media .script{position:absolute;right:30px;bottom:28px;font-family:var(--font-script);
+  font-size:clamp(2.2rem,3.4vw,3rem);line-height:1.1;color:#fff;text-align:right;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.cohort__note{color:var(--on-forest-muted);font-size:1rem;max-width:44ch;margin-bottom:2rem}
 .imgnote{position:absolute;left:16px;top:16px;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
   background:rgba(0,0,0,.35);color:#fff;padding:5px 9px;border-radius:6px}
 @media (max-width:860px){.cohort__grid{grid-template-columns:1fr}

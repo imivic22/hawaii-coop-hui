@@ -426,6 +426,13 @@ p{margin:0}
 .resources__sub{margin-top:clamp(32px,4vw,48px)}
 .form__success a{color:var(--pine);font-weight:700}
 
+/* seven principles: one even row on desktop, centered wrap on tablet, stacked on phones */
+.principle-chips{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.principle-chips .chip{justify-content:center;align-items:center;text-align:center;padding:.65em .55em;font-size:.8rem;line-height:1.3}
+@media (max-width:980px){.principle-chips{display:flex;flex-wrap:wrap;justify-content:center}.principle-chips .chip{font-size:.84rem;padding:.6em .9em}}
+@media (max-width:520px){.principle-chips{display:grid;grid-template-columns:1fr}}
+#cohort-aims .cohort__cols{margin-bottom:0}
+
 /* ---------- a11y ---------- */
 .skip{position:absolute;left:-9999px}
 .skip:focus{left:12px;top:12px;background:var(--paper);padding:10px 14px;border-radius:8px;z-index:99;border:1px solid var(--line)}

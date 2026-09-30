@@ -71,7 +71,7 @@ Formspree emails an ownership confirmation on the very first submission — conf
 **Open for team sign-off before wider promotion:**
 1. Audience scope — copy says farmers, ranchers, growers; add fishers / value-added food makers if in scope.
 2. Solidarity-economy framing — confirm the Hui identifies with it (lead currently says "a name many people use").
-3. "How we imagine the year" (Ground / Learn / Connect / Build) is a proposed arc labeled "a rough shape, not a schedule" — replace with the real plan when it exists.
+3. A drafted year timeline was removed at the team's request; add a real schedule section once the plan exists.
 4. Post-cohort access — copy says the Hui is a network and the cohort is one way in; nothing promised beyond that.
 5. Who monitors the form inbox; whether an updates list/newsletter will exist (checkbox is plain email consent).
 6. Privacy note says data isn't sold or shared — adjust if WSARE reporting uses participant data.

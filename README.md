@@ -48,10 +48,15 @@ Applied from the guidelines PDF:
   `line-*.svg`: outlined single-color versions made from each official icon's own dark layer
   (its ring plus line drawing); `line-ike.svg` and `line-hana.svg` are companion icons in the
   same style — swap in official ones if they get made. `favicon.png` / `og-image.png` are downsized from the package.
-- **Type**: body is **Inter** (brand-exact, Google Fonts). The display face is **Watkins** and
-  the secondary is **Rugpull** — neither is web-hosted, so **Playfair Display stands in for the
-  display face** for now. To go exact, self-host Watkins/Rugpull (`@font-face`) and update the
-  `--font-display` token + the Google Fonts `<link>`.
+- **Type**: body is **Inter** (Google Fonts). The brand display faces are self-hosted in
+  `assets/fonts/`: **TAY Watkins** (headings, footer quote) and **TAY Rug Pull** (hero word
+  column, the mauka-to-makai statement, the cohort overlay). Both are caps-only and single
+  weight, so everything set in them renders in capitals and headings use `font-weight:400`
+  with `font-synthesis:none`. Watkins has no kahakō vowels or dashes — keep Hawaiian words with
+  kahakō and any em dashes out of Watkins headings (use Rug Pull there). The `-web.woff2` copies
+  add one cmap entry mapping the ʻokina (U+02BB) to each font's own ‘ glyph so "Hawaiʻi" renders
+  in-font; the originals sit beside them untouched. Check the font license covers web
+  self-hosting in a public repo before promoting the site widely.
 
 ## Content, form, and what still needs team sign-off
 The expanded copy (Why a co-op, What a co-op can look like, Cohort "aiming for / how we

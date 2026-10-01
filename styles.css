@@ -5,6 +5,12 @@
    body, and a multicolor "wai" wave as the single burst of color.
    Brand tokens live in :root — swap them if the identity shifts.
    ============================================================ */
+/* ---- Brand web fonts (self-hosted). Both are caps-only, single-weight display faces.
+   The -web copies add one code-point mapping (ʻokina U+02BB -> the fonts' own ‘ glyph);
+   no outlines were changed. Inter stays for all body/UI copy. ---- */
+@font-face{font-family:"TAY Watkins";src:url("assets/fonts/TAYWatkins-web.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"TAY Rug Pull";src:url("assets/fonts/TAYRugPull-web.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+
 :root{
   /* ---- Brand palette (Hawaiʻi Co-op Hui guidelines) ---- */
   /* Parchment */
@@ -32,14 +38,13 @@
   --on-forest-muted:rgba(255,242,234,.74);
   --shadow:0 1px 2px rgba(17,49,55,.06), 0 14px 34px rgba(17,49,55,.10);
   --maxw:1200px;
-  /* Type — brand: Watkins (display) / Rugpull (secondary) / Inter (body).
-     The Watkins wordmark ships as outlined paths inside the official logo SVGs
-     (assets/brand/), so nothing stands in for it there. Watkins/Rugpull aren't
-     web-hosted; Playfair Display stands in for headline display until the
-     licensed fonts are self-hosted. Inter is exact. */
-  --font-display:"Playfair Display", Georgia, "Times New Roman", serif;
+  /* Type — brand: TAY Watkins (display) / TAY Rug Pull (secondary display) / Inter (body).
+     Watkins lacks kahakō vowels and dashes, so Hawaiian word stacks, the statement,
+     and the overlay use Rug Pull (which has them). Fallbacks only cover load failure. */
+  --font-display:"TAY Watkins", Georgia, "Times New Roman", serif;
+  --font-display-2:"TAY Rug Pull", Georgia, "Times New Roman", serif;
   --font-body:"Inter", system-ui, -apple-system, sans-serif;
-  --font-script:"Caveat", "Segoe Script", cursive;
+  --font-script:"TAY Rug Pull", Georgia, serif;
   /* drop-in hero image goes here when available */
   --hero-image:none;
   --lockup-h:64px;                              /* height of the logo lockup in the nav */
@@ -432,6 +437,17 @@ p{margin:0}
 @media (max-width:980px){.principle-chips{display:flex;flex-wrap:wrap;justify-content:center}.principle-chips .chip{font-size:.84rem;padding:.6em .9em}}
 @media (max-width:520px){.principle-chips{display:grid;grid-template-columns:1fr}}
 #cohort-aims .cohort__cols{margin-bottom:0}
+
+/* ---- Brand type tuning: caps-only, single weight -> no faux bold/italic, tighter sizes ---- */
+h1,h2,h3,h4{font-weight:400;font-synthesis:none;letter-spacing:.015em;line-height:1.04}
+.hero h1{font-weight:400;font-size:clamp(2.5rem,6.2vw,4.7rem);line-height:.98;letter-spacing:.01em}
+.section__head h2,.cohort h2,.work h2,.resources h2,.interest h2{font-size:clamp(1.5rem,2.9vw,2.2rem)}
+.hero__words li{font-family:var(--font-display-2);font-size:1.5rem;letter-spacing:.12em}
+.statement__text{font-family:var(--font-display-2);font-style:normal;font-size:clamp(1.15rem,1.9vw,1.45rem);line-height:1.35;letter-spacing:.03em}
+.footer__quote{font-style:normal;font-size:clamp(1.05rem,1.9vw,1.45rem);line-height:1.15;letter-spacing:.02em;max-width:24ch}
+.cohort__media .script{font-family:var(--font-display-2);font-size:clamp(2.3rem,3.5vw,3.1rem);letter-spacing:.06em;line-height:1.08}
+.form__success h3{font-size:1.3rem}
+.principle::before{font-family:var(--font-body)}
 
 /* ---------- a11y ---------- */
 .skip{position:absolute;left:-9999px}

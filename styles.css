@@ -52,9 +52,8 @@
 }
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-snap-type:y proximity;scroll-padding-top:104px}  /* settle at section starts when you stop near one */
+html{scroll-behavior:smooth}
 [id]{scroll-margin-top:104px}   /* keep anchored section titles clear of the sticky nav */
-main > section{scroll-snap-align:start}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{
   margin:0;background:var(--cream);color:var(--ink);

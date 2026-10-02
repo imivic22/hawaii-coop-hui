@@ -87,7 +87,10 @@ Formspree emails an ownership confirmation on the very first submission — conf
 8. Brand line "E kahe ke waiwai" uses *ke* before a w-word (standard would be *ka*) — from the guidelines, so left as-is unless the team wants it changed.
 
 ## Wave divider
-`assets/brand/wave.svg` (the brush-stroke wave under the hero) is generated, not hand-drawn:
+`assets/brand/wave.png` is the team's approved brush-stroke wave (the AI-made artwork from the
+mockup), cropped and with its background keyed to transparent, at 2x (1364×238). To swap it, drop
+in a new PNG/SVG and bump the `?v=` on the `<img>` in `index.html`.
+A generated alternative lives at `assets/brand/wave.svg`; it is produced, not hand-drawn:
 `python3 tools/wave.py assets/brand/wave.svg`. Knobs are at the top of the script — wavelengths
 (`L1..L3`), amplitudes (`A1..A3`), the `peaks` list (stroke weights, boldest first; `colors` pairs
 to it), `anchors` spread, `drift` range (how much strokes cross) and `random.seed`. Bump the `?v=`

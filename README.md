@@ -16,10 +16,13 @@ python3 -m http.server 8000
 # → http://localhost:8000
 ```
 
-## Sections (single scroll, top-nav anchors)
-Hero → About/values (waves + 6 value icons) → Co-op Cohort → Our Work (Learn/Connect/Build)
-→ Resources (session recordings) → Get Involved (CTA) → Footer.
-
+## Pages & sections
+`index.html` (single scroll, top-nav anchors): Hero → About/values (wave + 6 line icons) → Co-op Cohort
+→ Why a co-op (one section, five accordion dropdowns: what a co-op is · the seven principles · what a
+co-op can look like in Hawaiʻi · what the cohort is aiming for · who it's for) → Our Work → Express
+Interest form → Footer. `resources.html`: the three readings/listening links and session recordings,
+on its own page (nav "Resources"). Both pages share `styles.css`/`script.js`; bump the `?v=` on those
+links when you change them so visitors don't get a cached copy.
 ## Photos still needed (search `data-todo`)
 The mockup uses real photography that isn't in this repo yet — placeholders are in place:
 - **Hero** valley/river aerial → set `--hero-image` in `styles.css` to `url("assets/hero.jpg")`

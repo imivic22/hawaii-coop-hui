@@ -234,7 +234,7 @@ p{margin:0}
 /* ---------- Resources / recordings ---------- */
 .resources{background:var(--cream-2);padding-block:clamp(44px,6vw,72px)}
 .resources__head{max-width:640px;margin-bottom:2.4rem}
-.resources h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:.8rem}
+.resources h1,.resources h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:.8rem}
 .resources__head p{color:var(--muted)}
 .rec{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .rec__card{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
@@ -441,13 +441,33 @@ p{margin:0}
 /* ---- Brand type tuning: caps-only, single weight -> no faux bold/italic, tighter sizes ---- */
 h1,h2,h3,h4{font-weight:400;font-synthesis:none;letter-spacing:.015em;line-height:1.04}
 .hero h1{font-weight:400;font-size:clamp(2.5rem,6.2vw,4.7rem);line-height:.98;letter-spacing:.01em}
-.section__head h2,.cohort h2,.work h2,.resources h2,.interest h2{font-size:clamp(1.5rem,2.9vw,2.2rem)}
+.section__head h2,.cohort h2,.work h2,.resources h1,.resources h2,.interest h2{font-size:clamp(1.5rem,2.9vw,2.2rem)}
 .hero__words li{font-family:var(--font-display-2);font-size:1.5rem;letter-spacing:.12em}
 .statement__text{font-family:var(--font-display-2);font-style:normal;font-size:clamp(1.15rem,1.9vw,1.45rem);line-height:1.35;letter-spacing:.03em}
 .footer__quote{font-style:normal;font-size:clamp(1.05rem,1.9vw,1.45rem);line-height:1.15;letter-spacing:.02em;max-width:24ch}
 .cohort__media .script{font-family:var(--font-display-2);font-size:clamp(2.3rem,3.5vw,3.1rem);letter-spacing:.06em;line-height:1.08}
 .form__success h3{font-size:1.3rem}
 .principle::before{font-family:var(--font-body)}
+
+/* ---------- Accordion (Why a co-op) ---------- */
+.acc{display:grid;gap:10px;max-width:1000px}
+.acc__item{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:0 20px}
+.acc__item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:15px 0;font-family:var(--font-body);font-weight:700;font-size:1.02rem;color:var(--forest)}
+.acc__item summary::-webkit-details-marker{display:none}
+.acc__item summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--pine);flex:none;transition:transform .2s}
+.acc__item[open] summary::after{transform:rotate(45deg)}
+.acc__body{padding:2px 0 20px;display:grid;gap:14px}
+.acc__body>p{color:var(--muted);font-size:.96rem;max-width:70ch}
+.acc__body>p strong{color:var(--forest)}
+.acc__note{font-size:.9rem}
+.acc .items{gap:12px}
+.acc .item{background:var(--cream)}
+.acc .checks li{color:var(--muted)}
+.acc .checks li strong{color:var(--forest)}
+.acc .checks li::before{color:var(--pine)}
+.acc .principle-chips{margin-top:2px}
+.nav .brand{gap:0}
 
 /* ---------- a11y ---------- */
 .skip{position:absolute;left:-9999px}

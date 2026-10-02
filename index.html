@@ -20,7 +20,7 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/TAYWatkins-web.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/TAYRugPull-web.woff2">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261001a">
 </head>
 <body>
 <a class="skip" href="#about">Skip to content</a>
@@ -35,7 +35,6 @@
         <img class="brand__emblem" src="assets/brand/emblem.svg" alt="" width="69" height="64">
         <img class="brand__wordmark" src="assets/brand/wordmark-spectra.svg" alt="Hawaiʻi Co-op Hui" width="89" height="34">
       </span>
-      <span class="brand__tag">People · ʻĀina · Waiwai · Together</span>
     </a>
 
     <nav aria-label="Primary">
@@ -44,7 +43,7 @@
         <li><a href="#cohort">Cohort</a></li>
         <li><a href="#why-coop">Why a co-op</a></li>
         <li><a href="#our-work">Our Work</a></li>
-        <li><a href="#resources">Resources</a></li>
+        <li><a href="resources.html">Resources</a></li>
       </ul>
     </nav>
 
@@ -160,97 +159,89 @@
 
   </section>
 
-  <!-- ===================== WHY A CO-OP ===================== -->
-  <section id="why-coop" class="section section--paper">
+  <!-- ===================== WHY A CO-OP (accordion) ===================== -->
+  <section id="why-coop" class="section section--cream">
     <div class="wrap">
       <div class="section__head">
         <p class="eyebrow">Waiwai · Kaiāulu</p>
         <h2>A business owned by the people it serves.</h2>
         <p class="lead">You don't need to know the word "cooperative" to understand the idea. If you've ever lived in a family house where everybody chips in and everybody has a say, you already get it.</p>
       </div>
-      <div class="items items--3">
-        <article class="item">
-          <h3>What it is</h3>
-          <p>A co-op is a business owned by the people who use it or work in it — not outside investors. Members put in money or work, vote on the big decisions, and share the surplus.</p>
-        </article>
-        <article class="item">
-          <h3>Why it works</h3>
-          <p>One owner carries all the risk. In a co-op, risk and reward are shared, every member gets one vote, and everyone is genuinely invested.</p>
-        </article>
-        <article class="item">
-          <h3>Why here</h3>
-          <p>Laulima — many hands working together. A co-op is the legal structure for the same thing, and it keeps waiwai home, circulating in the kaiāulu instead of leaving.</p>
-        </article>
-      </div>
-      <p class="h-label h-label--row">The seven co-op principles <span class="opt">(International Cooperative Alliance)</span></p>
-      <div class="chips principle-chips">
-        <span class="chip">Open membership</span>
-        <span class="chip">One member, one vote</span>
-        <span class="chip">Members share the surplus</span>
-        <span class="chip">Members stay in charge</span>
-        <span class="chip">Keep learning together</span>
-        <span class="chip">Co-ops help co-ops</span>
-        <span class="chip">Care for the community</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== COHORT: AIMS + WHO IT'S FOR ===================== -->
-  <section id="cohort-aims" class="section section--dark">
-    <div class="wrap">
-        <div class="cohort__cols">
-          <div>
-            <p class="h-label">What we're aiming for</p>
+      <div class="acc">
+        <details class="acc__item">
+          <summary>What is a co-op?</summary>
+          <div class="acc__body">
+            <p><strong>What it is.</strong> A co-op is a business owned by the people who use it or work in it — not outside investors. Members put in money or work, vote on the big decisions, and share the surplus.</p>
+            <p><strong>Why it works.</strong> One owner carries all the risk. In a co-op, risk and reward are shared, every member gets one vote, and everyone is genuinely invested.</p>
+            <p><strong>Why here.</strong> Laulima — many hands working together. A co-op is the legal structure for the same thing, and it keeps waiwai home, circulating in the kaiāulu instead of leaving.</p>
+          </div>
+        </details>
+        <details class="acc__item">
+          <summary>The seven co-op principles</summary>
+          <div class="acc__body">
+            <p class="acc__note">Set out by the International Cooperative Alliance and shared by co-ops around the world.</p>
+            <div class="chips principle-chips">
+                    <span class="chip">Open membership</span>
+                    <span class="chip">One member, one vote</span>
+                    <span class="chip">Members share the surplus</span>
+                    <span class="chip">Members stay in charge</span>
+                    <span class="chip">Keep learning together</span>
+                    <span class="chip">Co-ops help co-ops</span>
+                    <span class="chip">Care for the community</span>
+                  </div>
+          </div>
+        </details>
+        <details class="acc__item">
+          <summary>What a co-op can look like in Hawaiʻi</summary>
+          <div class="acc__body">
+            <p class="acc__note">Four common shapes, each with a made-up Hawaiʻi example.</p>
+            <div class="items items--2">
+                    <article class="item">
+                      <h3>Producer or marketing co-op</h3>
+                      <p>Each member keeps their own farm; together they own the shared piece — a brand, a cooler, a truck, a wholesale relationship. Think: a valley of small farms that can't each fill a big order alone, selling under one name.</p>
+                      <p class="meta">Owned by the farms or ranches that sell through it</p>
+                    </article>
+                    <article class="item">
+                      <h3>Worker-owned co-op</h3>
+                      <p>The crew owns the business and votes on how it runs. Think: a shared kitchen turning kalo, ʻulu, and surplus fruit into products, where the people who show up every morning are also the owners.</p>
+                      <p class="meta">Owned by the people who do the work</p>
+                    </article>
+                    <article class="item">
+                      <h3>Shared services or purchasing co-op</h3>
+                      <p>Members pool buying power or share big-ticket things no single farm needs full time. Think: ranchers going in together on feed, fencing, and a portable chute, or growers sharing one bookkeeper.</p>
+                      <p class="meta">Owned by the businesses that use it</p>
+                    </article>
+                    <article class="item">
+                      <h3>Multi-stakeholder co-op</h3>
+                      <p>Farmers, workers, and community members each hold a seat. Think: a food hub where the growers who supply it, the staff who run it, and the families who buy from it all elect the board.</p>
+                      <p class="meta">Owned by more than one kind of member</p>
+                    </article>
+                  </div>
+          </div>
+        </details>
+        <details class="acc__item">
+          <summary>What the cohort is aiming for</summary>
+          <div class="acc__body">
             <ul class="checks">
-              <li><span><strong>Co-op literacy.</strong> We'll work on being able to explain what a co-op is, which kind fits your situation, and what it takes to run one.</span></li>
-              <li><span><strong>Skills to run a business with other people.</strong> We'll practice how members make decisions, govern together, and keep the thing running when there's more than one owner.</span></li>
-              <li><span><strong>Pilina across the pae ʻāina.</strong> Pilina means relationship, or connection, and the pae ʻāina is the whole island chain. Our aim is that you leave with people on other islands doing the same work — people you can actually call.</span></li>
-              <li><span><strong>Support for your real project.</strong> Our aim is that you bring what you're working on — a co-op you're starting, strengthening, or helping — and get to work it through with others.</span></li>
-              <li><span><strong>The Hui after the cohort.</strong> The cohort ends in November 2027; the Hui doesn't. The Hui is a network, not a one-year program, and the cohort is one way in.</span></li>
-            </ul>
+                          <li><span><strong>Co-op literacy.</strong> We'll work on being able to explain what a co-op is, which kind fits your situation, and what it takes to run one.</span></li>
+                          <li><span><strong>Skills to run a business with other people.</strong> We'll practice how members make decisions, govern together, and keep the thing running when there's more than one owner.</span></li>
+                          <li><span><strong>Pilina across the pae ʻāina.</strong> Pilina means relationship, or connection, and the pae ʻāina is the whole island chain. Our aim is that you leave with people on other islands doing the same work — people you can actually call.</span></li>
+                          <li><span><strong>Support for your real project.</strong> Our aim is that you bring what you're working on — a co-op you're starting, strengthening, or helping — and get to work it through with others.</span></li>
+                          <li><span><strong>The Hui after the cohort.</strong> The cohort ends in November 2027; the Hui doesn't. The Hui is a network, not a one-year program, and the cohort is one way in.</span></li>
+                        </ul>
           </div>
-          <div>
-            <p class="h-label">Who it's for</p>
+        </details>
+        <details class="acc__item">
+          <summary>Who the cohort is for</summary>
+          <div class="acc__body">
             <div class="items">
-              <article class="item"><h3>Producers</h3><p>Farmers, ranchers, growers, and other producers who want to work together instead of alone.</p></article>
-              <article class="item"><h3>Co-op members and leaders</h3><p>People already in a cooperative who want to make it stronger.</p></article>
-              <article class="item"><h3>Emerging co-ops</h3><p>Groups that are forming, or thinking about it, and don't want to guess their way through.</p></article>
-              <article class="item"><h3>Cooperative development practitioners</h3><p>The advisors, organizers, and technical-assistance folks who help co-ops start and grow.</p></article>
-            </div>
+                          <article class="item"><h3>Producers</h3><p>Farmers, ranchers, growers, and other producers who want to work together instead of alone.</p></article>
+                          <article class="item"><h3>Co-op members and leaders</h3><p>People already in a cooperative who want to make it stronger.</p></article>
+                          <article class="item"><h3>Emerging co-ops</h3><p>Groups that are forming, or thinking about it, and don't want to guess their way through.</p></article>
+                          <article class="item"><h3>Cooperative development practitioners</h3><p>The advisors, organizers, and technical-assistance folks who help co-ops start and grow.</p></article>
+                        </div>
           </div>
-        </div>
-    </div>
-  </section>
-
-  <!-- ===================== WHAT A CO-OP CAN LOOK LIKE ===================== -->
-  <section id="coop-types" class="section section--cream">
-    <div class="wrap">
-      <div class="section__head">
-        <p class="eyebrow">Hana</p>
-        <h2>What a co-op can look like in Hawaiʻi</h2>
-        <p class="lead">Four common shapes, each with a made-up Hawaiʻi example.</p>
-      </div>
-      <div class="items items--2">
-        <article class="item">
-          <h3>Producer or marketing co-op</h3>
-          <p>Each member keeps their own farm; together they own the shared piece — a brand, a cooler, a truck, a wholesale relationship. Think: a valley of small farms that can't each fill a big order alone, selling under one name.</p>
-          <p class="meta">Owned by the farms or ranches that sell through it</p>
-        </article>
-        <article class="item">
-          <h3>Worker-owned co-op</h3>
-          <p>The crew owns the business and votes on how it runs. Think: a shared kitchen turning kalo, ʻulu, and surplus fruit into products, where the people who show up every morning are also the owners.</p>
-          <p class="meta">Owned by the people who do the work</p>
-        </article>
-        <article class="item">
-          <h3>Shared services or purchasing co-op</h3>
-          <p>Members pool buying power or share big-ticket things no single farm needs full time. Think: ranchers going in together on feed, fencing, and a portable chute, or growers sharing one bookkeeper.</p>
-          <p class="meta">Owned by the businesses that use it</p>
-        </article>
-        <article class="item">
-          <h3>Multi-stakeholder co-op</h3>
-          <p>Farmers, workers, and community members each hold a seat. Think: a food hub where the growers who supply it, the staff who run it, and the families who buy from it all elect the board.</p>
-          <p class="meta">Owned by more than one kind of member</p>
-        </article>
+        </details>
       </div>
     </div>
   </section>
@@ -270,7 +261,7 @@
           <div class="card__body">
             <h3>Learn</h3>
             <p>Build cooperative literacy, skills, and leadership.</p>
-            <a class="textlink" href="#resources">See our programs &rarr;</a>
+            <a class="textlink" href="resources.html">See our programs &rarr;</a>
           </div>
         </article>
         <article class="card">
@@ -289,56 +280,6 @@
             <a class="textlink" href="#get-involved">Get involved &rarr;</a>
           </div>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== RESOURCES ===================== -->
-  <section id="resources" class="resources">
-    <div class="wrap">
-      <div class="resources__head">
-        <h2>Resources</h2>
-        <p>Three short pieces that explain the ideas behind the Hui.</p>
-      </div>
-      <div class="dig">
-        <a class="dig__link" href="https://institute.coop/what-worker-cooperative" target="_blank" rel="noopener">
-          <span class="dig__src">Democracy at Work Institute</span>
-          <h3>What is a Worker Cooperative?</h3>
-          <p>A short, clear explainer on the two things that define a worker co-op: the workers own it, and they run it on a one-worker-one-vote basis.</p>
-        </a>
-        <a class="dig__link" href="https://neweconomy.net/solidarity-economy/#what-is-the-solidarity-economy" target="_blank" rel="noopener">
-          <span class="dig__src">New Economy Coalition</span>
-          <h3>The Solidarity Economy</h3>
-          <p>The bigger picture: an economy where food, housing, credit, energy, and culture are owned and governed by everyday people. Co-ops are one of its building blocks.</p>
-        </a>
-        <a class="dig__link" href="https://open.spotify.com/episode/3qzcNoA8j1L7xvkE4CCkto" target="_blank" rel="noopener">
-          <span class="dig__src">Upstream podcast · Documentary #8 (Spotify)</span>
-          <h3>Worker Cooperatives Pt. 1 – Widening Spheres of Democracy</h3>
-          <p>An audio documentary, about an hour long, on the growth of worker co-ops since 2008 and what makes them different — told through a co-op bike and skate shop in Richmond, California that doubles as a community hub, and a look at what a strong co-op ecosystem looks like.</p>
-        </a>
-      </div>
-
-      <div class="resources__sub">
-        <p class="h-label">Session recordings</p>
-        <div class="rec">
-          <!-- To publish a recording, replace the placeholder .rec__media with an embed:
-               <div class="rec__media"><iframe src="https://www.youtube.com/embed/VIDEO_ID"
-                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                 allowfullscreen title="Session title"></iframe></div>
-               (Vimeo: https://player.vimeo.com/video/VIDEO_ID) -->
-          <article class="rec__card">
-            <div class="rec__media"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></div>
-            <div class="rec__body"><span class="rec__tag">Virtual · Session 01</span><h3>Welcome &amp; orientation</h3><p>Kick-off gathering and an intro to the cohort journey.</p></div>
-          </article>
-          <article class="rec__card">
-            <div class="rec__media"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></div>
-            <div class="rec__body"><span class="rec__tag">Workshop</span><h3>Coming soon</h3><p>In-person workshop recordings will be posted here.</p></div>
-          </article>
-          <article class="rec__card">
-            <div class="rec__media"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></div>
-            <div class="rec__body"><span class="rec__tag">Virtual · Session 02</span><h3>Coming soon</h3><p>This recording will appear after the session.</p></div>
-          </article>
-        </div>
       </div>
     </div>
   </section>
@@ -435,7 +376,7 @@
 
       <div id="interest-success" class="form__success" hidden>
         <h3>Mahalo — we got it.</h3>
-        <p>We'll be in touch as cohort details take shape. In the meantime, the readings and listening in <a href="#resources">Resources</a> are a good place to start. E kahe ka wai.</p>
+        <p>We'll be in touch as cohort details take shape. In the meantime, the readings and listening in <a href="resources.html">Resources</a> are a good place to start. E kahe ka wai.</p>
       </div>
     </div>
   </section>
@@ -455,6 +396,6 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js?v=20261001a"></script>
 </body>
 </html>

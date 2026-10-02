@@ -24,8 +24,8 @@ TEAL, DEEP, SLATE, INK = '#22a09d', '#0a7473', '#2e6d75', '#113137'
 OLIVE, DOLIVE, RUST, TAN = '#8a9140', '#60682d', '#ae562c', '#a5783c'
 
 # ---------------------------------------------------------------- shared swell
-L1, L2, L3 = 540.0, 250.0, 120.0   # wavelengths (px)
-A1, A2, A3 = 38.0, 9.0, 2.0        # amplitudes (px)
+L1, L2, L3 = 580.0, 240.0, 120.0   # wavelengths (px)
+A1, A2, A3 = 54.0, 8.0, 0.0        # amplitudes (px)
 G1 = -2 * math.pi * 50.0 / L1       # pins the big swell: dips near x~400, crests near x~1100
 G2 = random.uniform(0, 2 * math.pi)
 G3 = random.uniform(0, 2 * math.pi)
@@ -42,18 +42,17 @@ def swell(x, s):
 def make_strokes():
     # peak half-widths, boldest first; colours are paired to weight so the heaviest
     # ribbons are teal/olive family and rust/tan sit at medium weight as accents.
-    peaks = [14.9, 13.2, 11.5, 9.8, 8.6, 7.5, 6.9, 5.8, 5.2, 4.6, 3.9, 3.3, 2.9, 2.5, 2.3, 10.9, 9.2, 6.3, 4.8, 4.1, 3.0, 2.6]
-    colors = [TEAL, DEEP, OLIVE, TEAL, SLATE, RUST, DOLIVE, TEAL,
-              TAN, INK, RUST, TEAL, SLATE, DEEP, OLIVE, DEEP, TEAL, OLIVE, RUST, SLATE, TEAL, DOLIVE]
+    peaks = [30.0, 27.0, 25.0, 22.0, 20.0, 18.0, 15.0, 13.0, 12.0, 10.0, 9.0, 7.0, 6.0, 5.0, 4.0, 3.5, 3.0, 2.5]
+    colors = [INK, DEEP, SLATE, OLIVE, TEAL, DOLIVE, RUST, TEAL, OLIVE, DEEP, RUST, TAN, TEAL, SLATE, OLIVE, TEAL, INK, DEEP]
     n = len(peaks)
 
     # lengths: two (near) full-width, a run of long/medium, a few short
-    fracs = [1.0, 0.98, 0.92, 0.85, 0.80, 0.75, 0.70, 0.65, 0.60, 0.55, 0.50, 0.45, 0.42, 0.38, 0.35, 0.95, 0.88, 0.7, 0.6, 0.5, 0.44, 0.4]
+    fracs = [1.0, 0.98, 0.92, 0.85, 0.78, 0.72, 0.66, 0.60, 0.56, 0.52, 0.50, 0.48, 0.45, 0.42, 0.40, 0.38, 0.36, 0.34]
     fracs = [min(1.0, f + random.uniform(-0.03, 0.03)) for f in fracs]
     random.shuffle(fracs)
 
     # vertical anchors: stratified across the band (guarantees spread + gaps), then shuffled
-    anchors = [-50.0 + 100.0 * (i + random.uniform(0.15, 0.85)) / n for i in range(n)]
+    anchors = [-46.0 + 92.0 * (i + random.uniform(0.15, 0.85)) / n for i in range(n)]
     random.shuffle(anchors)
 
     # start positions: stratified slots so short strokes are spread left-to-right
@@ -67,7 +66,7 @@ def make_strokes():
         x0 = lo + (hi - lo) * (slots[i] + random.uniform(0.1, 0.9)) / n
         x1 = x0 + length
         # opposite-sign drift on alternating strokes -> neighbours cross each other
-        drift = random.uniform(25, 65) * (1 if i % 2 == 0 else -1)
+        drift = random.uniform(12, 40) * (1 if i % 2 == 0 else -1)
         strokes.append(dict(
             color=colors[i],
             peak=peaks[i],
@@ -78,7 +77,7 @@ def make_strokes():
             j1=random.uniform(-0.30, 0.30),
             j2=random.uniform(-0.70, 0.70),
             j3=random.uniform(0, 2 * math.pi),
-            p=random.uniform(0.8, 1.6),                # taper sharpness
+            p=random.uniform(1.3, 2.2),                # taper sharpness
             q=random.uniform(0.80, 1.25),              # skews where the thickest point sits
             n1=random.uniform(0, 2 * math.pi), f1=random.uniform(1.5, 3.0),
             n2=random.uniform(0, 2 * math.pi), f2=random.uniform(3.5, 6.0),
@@ -87,9 +86,9 @@ def make_strokes():
         ))
 
     # dry-brush tails: three medium-weight strokes break into dashes near their end
-    candidates = [s for s in strokes if 4.0 <= s['peak'] <= 10.0]
+    candidates = [s for s in strokes if 9.0 <= s['peak'] <= 22.0]
     random.shuffle(candidates)
-    for s in candidates[:4]:
+    for s in candidates[:3]:
         s['dry'] = dict(start=random.uniform(0.55, 0.70), count=random.randint(2, 3))
 
     # two of the thin strokes at 0.85 opacity
@@ -156,6 +155,19 @@ def sample_piece(s, ta, tb, kind):
     return pts
 
 
+def offset_pts(pts, frac, wfrac):
+    """A thin sliver riding inside a stroke: offset along the normal by frac*hw, width wfrac*hw, tapered."""
+    n = len(pts); res = []
+    for k in range(n):
+        x, y, hw = pts[k]
+        xp, yp, _ = pts[max(0, k - 1)]; xn, yn, _ = pts[min(n - 1, k + 1)]
+        tx, ty = xn - xp, yn - yp; ln = math.hypot(tx, ty) or 1.0
+        nx, ny = -ty / ln, tx / ln
+        u = k / (n - 1); taper = math.sin(u * math.pi) ** 0.6
+        res.append([x + nx * hw * frac, y + ny * hw * frac, max(1.4, hw * wfrac) * taper])
+    return res
+
+
 def fmt(v):
     r = round(v, 1)
     return str(int(r)) if r == int(r) else str(r)
@@ -209,6 +221,18 @@ def build_svg():
     for s, pts in sampled:
         op = '' if s['opacity'] >= 1.0 else ' fill-opacity="%s"' % fmt(s['opacity'])
         out.append('<path fill="%s"%s d="%s"/>' % (s['color'], op, ribbon_path(pts)))
+    # cream slivers "cut" into the bold strokes, like a linocut
+    CREAM = '#fff2ea'
+    for s, pts in sampled:
+        if s['peak'] < 12 or len(pts) < 20:
+            continue
+        for _ in range(random.choice([1, 1, 2])):
+            frac = random.choice([-1, 1]) * random.uniform(0.25, 0.5)
+            a = random.uniform(0.08, 0.35); b = min(0.95, a + random.uniform(0.3, 0.6))
+            sub = [p for i, p in enumerate(pts) if a <= i / (len(pts) - 1) <= b]
+            if len(sub) < 6:
+                continue
+            out.append('<path fill="%s" d="%s"/>' % (CREAM, ribbon_path(offset_pts(sub, frac, 0.16))))
     out.append('</svg>\n')
     return '\n'.join(out)
 

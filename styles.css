@@ -161,7 +161,7 @@ p{margin:0}
   display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,500px);gap:clamp(28px,4vw,64px);align-items:center}
 .wave{display:block;width:calc(100% + 260px);max-width:none;margin-left:-260px;height:auto}
 .statement__text{font-family:var(--font-display);font-style:italic;font-size:1.28rem;line-height:1.5;color:var(--ink)}
-@media (max-width:820px){.statement__inner{grid-template-columns:1fr;gap:24px;width:100%;padding:0 20px 0 0}.wave{width:calc(100% + 80px);margin-left:-40px}}
+@media (max-width:820px){.statement__inner{grid-template-columns:1fr;gap:24px;width:100%;padding:0 20px 0 0}.wave{width:calc(100% + 80px);margin-left:-40px}.statement__text{padding-left:20px}}
 
 /* ---------- Values ---------- */
 .values{background:var(--cream);padding-block:0 clamp(56px,7vw,88px)}

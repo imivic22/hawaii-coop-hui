@@ -139,7 +139,7 @@ p{margin:0}
 .hero__eyebrow{font-family:var(--font-body);font-size:.74rem;font-weight:700;letter-spacing:.24em;
   text-transform:uppercase;color:rgba(241,236,223,.85);margin:0 0 1.2rem}
 .hero h1{font-size:clamp(3.2rem,8.5vw,6.2rem);font-weight:600;line-height:.98;color:#fff}
-.hero__sub{max-width:34ch;font-size:clamp(1.25rem,1.9vw,1.55rem);line-height:1.45;color:rgba(241,236,223,.92);margin:1.6rem 0 2.2rem}
+.hero__sub{max-width:38ch;font-size:clamp(1.1rem,1.5vw,1.3rem);line-height:1.5;color:rgba(241,236,223,.92);margin:1.6rem 0 2.2rem}
 .hero__aside{justify-self:end;text-align:right}
 .hero__words{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}
 .hero__words li{font-family:var(--font-display);font-size:1.35rem;letter-spacing:.14em;color:#fff;opacity:.95}

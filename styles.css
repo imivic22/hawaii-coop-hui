@@ -479,7 +479,10 @@ h1,h2,h3,h4{font-weight:400;font-synthesis:none;letter-spacing:.015em;line-heigh
 
 /* ---------- Hero logo + drawn kahakō ---------- */
 .hero__logo{justify-self:center;width:min(100%,460px);height:auto;aspect-ratio:1/1;object-fit:contain;box-sizing:border-box;
-  padding:4.5%;background:var(--cream);border-radius:50%;filter:drop-shadow(0 14px 34px rgba(9,28,29,.30))}  /* full-color emblem on a cream disc, like the nav */
+  padding:7%;border-radius:50%;
+  /* full-color emblem, no hard border: a soft cream glow behind it fades out into the blue */
+  background:radial-gradient(closest-side,rgba(255,242,234,.9) 0%,rgba(255,242,234,.78) 55%,rgba(255,242,234,.32) 82%,rgba(255,242,234,0) 100%)}
+.hero__logo--white{background:none;padding:6%;filter:drop-shadow(0 12px 30px rgba(9,28,29,.22))}   /* all-cream emblem alternative */
 .kahako{position:relative;display:inline-block}
 .kahako::before{content:"";position:absolute;left:50%;transform:translateX(-50%);top:-.11em;
   width:.5em;height:.085em;border-radius:.03em;background:currentColor}

@@ -45,8 +45,6 @@
   --font-display-2:"TAY Rug Pull", Georgia, "Times New Roman", serif;
   --font-body:"Inter", system-ui, -apple-system, sans-serif;
   --font-script:"TAY Rug Pull", Georgia, serif;
-  /* drop-in hero image goes here when available */
-  --hero-image:none;
   --lockup-h:64px;                              /* height of the logo lockup in the nav */
   --pattern:url("assets/brand/pattern.svg");    /* official seamless brand pattern (transparent) */
 }
@@ -127,31 +125,70 @@ p{margin:0}
 @media (max-width:1000px){.nav__cta .btn{display:none}}
 
 /* ---------- Hero ---------- */
-.hero{position:relative;color:var(--on-forest);isolation:isolate;
+/* Text on the left; on the right the full-color emblem inside a ring of the brand line
+   ("E kahe ka wai…") in TAY Rug Pull, with faint water ripples spreading out behind it.
+   The six values sit in a quiet band along the bottom of the first screen. */
+.hero{position:relative;color:var(--on-forest);isolation:isolate;overflow:hidden;display:flex;flex-direction:column;
+  --medal:clamp(300px, min(40vw, calc(100vh - 260px)), 560px);
+  --medal:clamp(300px, min(40vw, calc(100svh - 260px)), 560px);
+  min-height:clamp(580px, calc(100vh - 89px), 860px);           /* 89px = nav height */
+  min-height:clamp(580px, calc(100svh - 89px), 860px);
+  /* lighter Spectra blue, brightest behind the emblem; a soft shade on the left keeps the text crisp */
   background:
-    linear-gradient(180deg, rgba(17,49,55,.16), rgba(17,49,55,.04) 45%, rgba(17,49,55,.30)),
-    var(--hero-image),
-    radial-gradient(110% 95% at 58% 30%, #3e8a90, #2b6b72 55%, #215a61);   /* lighter Spectra blue */
-  background-size:cover;background-position:center}
+    linear-gradient(90deg, rgba(17,49,55,.28), rgba(17,49,55,.12) 45%, rgba(17,49,55,0) 68%),
+    radial-gradient(110% 95% at 72% 46%, #3e8a90, #2b6b72 55%, #215a61)}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.28;
   background:var(--pattern);background-size:420px;mix-blend-mode:soft-light}
-.hero__inner{max-width:var(--maxw);margin:0 auto;padding:96px 28px 84px;
-  display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr) auto;gap:clamp(28px,4vw,56px);align-items:center;min-height:min(72vh,680px)}
-.hero__eyebrow{font-family:var(--font-body);font-size:.74rem;font-weight:700;letter-spacing:.24em;
-  text-transform:uppercase;color:rgba(241,236,223,.85);margin:0 0 1.2rem}
-.hero h1{font-size:clamp(3.2rem,8.5vw,6.2rem);font-weight:600;line-height:.98;color:#fff}
-.hero__sub{max-width:30ch;font-size:clamp(1.1rem,1.5vw,1.3rem);line-height:1.5;color:rgba(241,236,223,.92);margin:1.6rem 0 2.2rem}
-.hero__aside{justify-self:end;text-align:right}
-.hero__words{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}
-.hero__words li{font-family:var(--font-display);font-size:1.35rem;letter-spacing:.14em;color:#fff;opacity:.95}
-.hero__rule{width:56px;height:1.5px;background:rgba(241,236,223,.5);margin:1.6rem 0 1.1rem;margin-left:auto}
-.hero__tag{font-family:var(--font-body);font-size:.72rem;font-weight:700;letter-spacing:.18em;
-  text-transform:uppercase;color:rgba(241,236,223,.8);line-height:1.8}
+.hero__inner{flex:1;width:100%;max-width:var(--maxw);margin:0 auto;
+  padding:clamp(40px,6vh,72px) 28px;display:grid;grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;gap:clamp(32px,5vw,80px)}
+.hero__text{position:relative;z-index:1;min-width:0}   /* headline, sentence and button paint above the ripples */
+.hero h1{font-weight:400;font-size:clamp(3.4rem,6.8vw,6.25rem);line-height:1.06;letter-spacing:.012em;color:#fff;
+  text-shadow:0 2px 24px rgba(9,28,29,.16)}
+.hero__sub{max-width:27ch;font-size:clamp(1.15rem,1.55vw,1.4rem);line-height:1.5;color:var(--cream);
+  margin:1.5rem 0 2.3rem;text-shadow:0 1px 14px rgba(9,28,29,.22)}
+.hero .btn{font-size:.86rem;padding:1.05em 1.9em;box-shadow:0 10px 26px rgba(9,28,29,.2)}
+
+/* emblem + word ring */
+.hero__medal{position:relative;width:var(--medal);aspect-ratio:1/1;justify-self:end;isolation:isolate}
+.hero__ring{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.hero__ring text{font-family:var(--font-display-2);font-size:32px;letter-spacing:7.6px;fill:var(--cream);white-space:pre}
+.hero__dot{fill:#f0c39c}
+.hero__hair{fill:none;stroke:var(--cream);stroke-opacity:.38;stroke-width:1.2}
+/* soft shade between the two hairlines so the ring text keeps 4.5:1 on the lightest blue */
+.hero__track{fill:none;stroke:#113137;stroke-opacity:.3;stroke-width:52}
+.hero__emblem{position:absolute;left:50%;top:50%;width:62%;height:auto;
+  transform:translate(-50%,-50%);filter:drop-shadow(0 14px 30px rgba(9,28,29,.24))}
+.hero__ripples{position:absolute;left:50%;top:50%;width:220%;height:220%;max-width:none;
+  transform:translate(-50%,-50%);z-index:-1;pointer-events:none;fill:none;stroke:var(--cream);stroke-width:1.4}
+@media (prefers-reduced-motion:no-preference){
+  .hero__ring{animation:hero-turn 180s linear infinite}   /* one slow turn every 3 minutes */
+}
+@keyframes hero-turn{to{transform:rotate(360deg)}}
+
+/* values band */
+.hero__band{position:relative;background:rgba(17,49,55,.2);border-top:1px solid rgba(255,242,234,.16)}
+.hero__values{list-style:none;margin:0 auto;padding:0 28px;max-width:var(--maxw);
+  display:grid;grid-template-columns:repeat(6,1fr)}
+.hero__values li{position:relative;text-align:center;padding:20px 6px 22px;
+  font-family:var(--font-display-2);font-size:1.2rem;line-height:1.2;letter-spacing:.16em;color:var(--cream)}
+.hero__values li+li::before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;
+  border-radius:50%;background:#f0c39c;opacity:.75;transform:translate(-50%,-50%)}
+
 @media (max-width:900px){
-  .hero__inner{grid-template-columns:1fr;gap:34px;padding:76px 28px 64px}
-  .hero__aside{justify-self:start;text-align:left}
-  .hero__rule{margin-left:0}
-  .hero__logo{display:none}
+  .hero{min-height:0}
+  .hero__inner{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center;
+    padding:52px 20px 48px;gap:44px}
+  .hero__sub{margin-inline:auto}
+  .hero__medal{width:min(80vw,380px);justify-self:center}
+  .hero__ripples{width:175%;height:175%}
+  .hero__values{grid-template-columns:repeat(3,1fr);padding:6px 20px}
+  .hero__values li{padding:9px 4px;font-size:1.05rem;letter-spacing:.12em}
+  .hero__values li:nth-child(3n+1)::before{display:none}
+}
+@media (max-width:420px){
+  .hero h1{font-size:clamp(2.7rem,14vw,3.4rem)}
+  .hero__values li{font-size:.95rem;letter-spacing:.1em}
 }
 
 /* ---------- Statement + waves ---------- */
@@ -450,10 +487,8 @@ p{margin:0}
 
 /* ---- Brand type tuning: caps-only, single weight -> no faux bold/italic, tighter sizes ---- */
 h1,h2,h3,h4{font-weight:400;font-synthesis:none;letter-spacing:.015em;line-height:1.04}
-.hero h1{font-weight:400;font-size:clamp(2.6rem,5.6vw,4.4rem);line-height:1.1;letter-spacing:.01em}
 .section__head h2,.cohort h2,.resources h1,.resources h2,.interest h2{font-size:clamp(2rem,4vw,3rem)}
 .work h2{font-size:clamp(1.8rem,2.9vw,2.4rem)}
-.hero__words li{font-family:var(--font-display-2);font-size:1.5rem;letter-spacing:.12em}
 .statement__text{font-family:var(--font-display-2);font-style:normal;font-size:clamp(1.25rem,1.9vw,1.65rem);line-height:1.32;letter-spacing:.025em;
   color:var(--accent);margin:0;text-wrap:balance}
 .footer__quote{font-style:normal;font-size:clamp(1.05rem,1.9vw,1.45rem);line-height:1.15;letter-spacing:.02em;max-width:24ch}
@@ -481,8 +516,7 @@ h1,h2,h3,h4{font-weight:400;font-synthesis:none;letter-spacing:.015em;line-heigh
 .acc .principle-chips{margin-top:2px}
 .nav .brand{gap:0}
 
-/* ---------- Hero logo + drawn kahakō ---------- */
-.hero__logo{justify-self:center;width:min(100%,384px);height:auto;filter:drop-shadow(0 12px 30px rgba(9,28,29,.22))}  /* emblem alone, no border or glow, filling the middle space */
+/* ---------- Drawn kahakō (TAY Watkins has no macron vowels) ---------- */
 .kahako{position:relative;display:inline-block}
 .kahako::before{content:"";position:absolute;left:50%;transform:translateX(-50%);top:-.11em;
   width:.5em;height:.085em;border-radius:.03em;background:currentColor}

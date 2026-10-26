@@ -25,7 +25,6 @@ with room for the food/bill collaboration piece Keoni mentioned; `resources.html
 links when you change them so visitors don't get a cached copy.
 ## Photos still needed (search `data-todo`)
 The mockup uses real photography that isn't in this repo yet — placeholders are in place:
-- **Hero** valley/river aerial → set `--hero-image` in `styles.css` to `url("assets/hero.jpg")`
 - **Cohort** kalo-planting photo → set as `background-image` on `.cohort__media`
 - **Our Work** cards (Learn/Connect/Build) → replace each `.card__img`
 - Real, rights-cleared images only — tell me the source and I'll wire them in.
@@ -53,7 +52,7 @@ Applied from the guidelines PDF:
   same style — swap in official ones if they get made. `favicon.png` / `og-image.png` are downsized from the package.
 - **Type**: body is **Inter** (Google Fonts). The brand display faces are self-hosted in
   `assets/fonts/`: **TAY Watkins** (headings, footer quote) and **TAY Rug Pull** (hero word
-  column, the mauka-to-makai statement, the cohort overlay). Both are caps-only and single
+  ring and values band, the mauka-to-makai statement, the cohort overlay). Both are caps-only and single
   weight, so everything set in them renders in capitals and headings use `font-weight:400`
   with `font-synthesis:none`. Watkins has no kahakō vowels or dashes — keep Hawaiian words with
   kahakō and any em dashes out of Watkins headings (use Rug Pull there). The `-web.woff2` copies

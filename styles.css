@@ -135,11 +135,11 @@ p{margin:0}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.28;
   background:var(--pattern);background-size:420px;mix-blend-mode:soft-light}
 .hero__inner{max-width:var(--maxw);margin:0 auto;padding:96px 28px 84px;
-  display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr) auto;gap:clamp(28px,4vw,56px);align-items:center;min-height:min(72vh,680px)}
+  display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.15fr) auto;gap:clamp(28px,4vw,56px);align-items:center;min-height:min(72vh,680px)}
 .hero__eyebrow{font-family:var(--font-body);font-size:.74rem;font-weight:700;letter-spacing:.24em;
   text-transform:uppercase;color:rgba(241,236,223,.85);margin:0 0 1.2rem}
 .hero h1{font-size:clamp(3.2rem,8.5vw,6.2rem);font-weight:600;line-height:.98;color:#fff}
-.hero__sub{max-width:38ch;font-size:clamp(1.1rem,1.5vw,1.3rem);line-height:1.5;color:rgba(241,236,223,.92);margin:1.6rem 0 2.2rem}
+.hero__sub{max-width:30ch;font-size:clamp(1.1rem,1.5vw,1.3rem);line-height:1.5;color:rgba(241,236,223,.92);margin:1.6rem 0 2.2rem}
 .hero__aside{justify-self:end;text-align:right}
 .hero__words{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}
 .hero__words li{font-family:var(--font-display);font-size:1.35rem;letter-spacing:.14em;color:#fff;opacity:.95}
@@ -194,7 +194,9 @@ p{margin:0}
 @media (max-width:760px){.whyco__grid{grid-template-columns:1fr;gap:20px}}
 
 /* ---------- Cohort (dark, two-column) ---------- */
-.cohort{background:var(--forest);color:var(--on-forest);position:relative;overflow:hidden}
+/* Cohort: same lighter Spectra blue as the hero; muted text raised to stay readable on the lighter ground. */
+.cohort{background:linear-gradient(160deg,#33797f 0%,#28666d 55%,#1f565c 100%);color:var(--on-forest);position:relative;overflow:hidden;
+  --on-forest-muted:rgba(255,242,234,.9)}
 .cohort__grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
 .cohort__text{padding:clamp(56px,7vw,96px) clamp(28px,5vw,64px)}
 .cohort__text .max{max-width:520px;margin-left:auto}
@@ -206,18 +208,15 @@ p{margin:0}
 .fact p{color:var(--on-forest-muted);font-size:1.06rem}
 .fact strong{color:var(--on-forest);font-weight:700}
 .cohort__actions{display:flex;flex-wrap:wrap;gap:16px 22px;align-items:center}
-.cohort__media{position:relative;min-height:420px;isolation:isolate;
-  background:linear-gradient(120deg,#1c5a52,#0d2a2e), radial-gradient(80% 80% at 30% 20%,#22a09d,transparent);
-  background-size:cover;background-position:center}
-.cohort__media::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.32;
-  background:var(--pattern);background-size:360px;mix-blend-mode:soft-light}
+.cohort__media{position:relative;min-height:420px;
+  background:linear-gradient(180deg,rgba(17,49,55,0) 50%,rgba(17,49,55,.6)),url("assets/photos/cohort-kalo.jpg") center 40%/cover}
 .cohort__media .script{position:absolute;right:30px;bottom:28px;font-family:var(--font-script);
   font-size:clamp(2.2rem,3.4vw,3rem);line-height:1.1;color:#fff;text-align:right;text-shadow:0 2px 12px rgba(0,0,0,.5)}
 .cohort__note{color:var(--on-forest-muted);font-size:1.1rem;max-width:44ch;margin-bottom:2rem}
 .imgnote{position:absolute;left:16px;top:16px;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
   background:rgba(0,0,0,.35);color:#fff;padding:5px 9px;border-radius:6px}
 @media (max-width:860px){.cohort__grid{grid-template-columns:1fr}
-  .cohort__text .max{margin-left:0}.cohort__media{min-height:300px;order:-1}}
+  .cohort__text .max{margin-left:0}.cohort__media{min-height:360px;order:-1}}
 
 /* ---------- Our Work ---------- */
 .work{background:var(--cream);padding-block:clamp(60px,8vw,104px)}
@@ -227,10 +226,7 @@ p{margin:0}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;
   display:flex;flex-direction:column}
-.card__img{aspect-ratio:4/3;position:relative;
-  background:linear-gradient(rgba(255,242,234,.38),rgba(255,242,234,.38)), var(--pattern) center/300px, var(--cream-2)}
-.card__img span{position:absolute;left:10px;top:10px;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;
-  background:rgba(30,58,49,.6);color:#fff;padding:4px 7px;border-radius:5px}
+.card__photo{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
 .card__body{padding:18px 18px 22px;display:flex;flex-direction:column;gap:.5rem;flex:1}
 .card h3{font-family:var(--font-body);font-weight:800;font-size:.9rem;letter-spacing:.14em;
   text-transform:uppercase;color:var(--pine)}
@@ -480,10 +476,14 @@ h1,h2,h3,h4{font-weight:400;font-synthesis:none;letter-spacing:.015em;line-heigh
 .nav .brand{gap:0}
 
 /* ---------- Hero logo + drawn kahakō ---------- */
-.hero__logo{justify-self:center;width:min(100%,320px);height:auto;filter:drop-shadow(0 10px 30px rgba(9,28,29,.25))}
+.hero__logo{justify-self:center;width:min(100%,420px);height:auto;aspect-ratio:1/1;object-fit:contain;box-sizing:border-box;
+  padding:8%;background:var(--cream);border-radius:50%;filter:drop-shadow(0 14px 34px rgba(9,28,29,.30))}  /* full-color emblem on a cream disc, like the nav */
 .kahako{position:relative;display:inline-block}
 .kahako::before{content:"";position:absolute;left:50%;transform:translateX(-50%);top:-.11em;
   width:.5em;height:.085em;border-radius:.03em;background:currentColor}
+
+/* phones: smaller photo overlay (must come after the type-tuning rule that sizes .script) */
+@media (max-width:860px){.cohort__media .script{font-size:1.35rem;right:16px;bottom:14px}}
 
 /* ---------- a11y ---------- */
 .skip{position:absolute;left:-9999px}

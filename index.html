@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Hawaiʻi Co-op Hui</title>
-  <meta name="description" content="A network of people and cooperatives building a regenerative and just Hawaiʻi through shared resources, knowledge, and community ownership.">
+  <meta name="description" content="A network of people and cooperatives sharing resources, knowledge, and community.">
   <meta property="og:title" content="Hawaiʻi Co-op Hui — Kūpaʻa Kākou">
-  <meta property="og:description" content="A network of people and cooperatives building a regenerative and just Hawaiʻi through shared resources, knowledge, and community ownership.">
+  <meta property="og:description" content="A network of people and cooperatives sharing resources, knowledge, and community.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://imivic22.github.io/hawaii-coop-hui/">
   <meta property="og:image" content="https://imivic22.github.io/hawaii-coop-hui/assets/og-image.png">
@@ -20,7 +20,7 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/TAYWatkins-web.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/TAYRugPull-web.woff2">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="styles.css?v=20261026b">
+  <link rel="stylesheet" href="styles.css?v=20261026f">
 </head>
 <body>
 <a class="skip" href="#about">Skip to content</a>
@@ -64,10 +64,10 @@
         <!-- The brand face (TAY Watkins) has no kahakō, so the Ū and Ā macrons are drawn in CSS (.kahako);
              the real text stays in .sr-only for screen readers, search, and copy-paste. -->
         <h1 class="hero__title"><span class="sr-only">Kūpaʻa Kākou</span><span aria-hidden="true">K<span class="kahako">U</span>PAʻA<br>K<span class="kahako">A</span>KOU</span></h1>
-        <p class="hero__sub">A network of people and cooperatives building a regenerative and just Hawaiʻi through shared resources, knowledge, and community ownership.</p>
+        <p class="hero__sub">A network of people and cooperatives sharing resources, knowledge, and community.</p>
         <a class="btn btn--light" href="#get-involved">Join the Movement <span class="arw">&rarr;</span></a>
       </div>
-      <img class="hero__logo" src="assets/brand/emblem-parchment.svg" alt="" width="229" height="212">
+      <img class="hero__logo" src="assets/brand/emblem.svg" alt="" width="229" height="212">
       <aside class="hero__aside" aria-label="Our values">
         <ul class="hero__words">
           <li>ʻĀINA</li><li>HANA</li><li>ʻIKE</li><li>WAIWAI</li><li>MEAʻAI</li><li>KAIĀULU</li>
@@ -150,8 +150,7 @@
           </div>
         </div>
       </div>
-      <div class="cohort__media" data-todo="cohort-photo — kalo planting; set as background-image">
-        <span class="imgnote">Photo placeholder</span>
+      <div class="cohort__media" role="img" aria-label="Co-op members standing beside rows of kalo in a shade house">
         <div class="script">He ʻĀina<br>He Lāhui<br>He Waiwai</div>
       </div>
     </div>
@@ -256,7 +255,7 @@
       </div>
       <div class="cards">
         <article class="card">
-          <div class="card__img"><span>Photo</span></div>
+          <img class="card__photo" src="assets/photos/learn.jpg" alt="Hands writing ideas on a large sheet of paper during a co-op workshop" width="1024" height="768" loading="lazy">
           <div class="card__body">
             <h3>Learn</h3>
             <p>Build cooperative literacy, skills, and leadership.</p>
@@ -264,7 +263,7 @@
           </div>
         </article>
         <article class="card">
-          <div class="card__img"><span>Photo</span></div>
+          <img class="card__photo" src="assets/photos/connect.jpg" alt="A large group of cohort participants smiling together" width="1024" height="768" loading="lazy">
           <div class="card__body">
             <h3>Connect</h3>
             <p>Strengthen pilina across the pae ʻāina.</p>
@@ -272,7 +271,7 @@
           </div>
         </article>
         <article class="card">
-          <div class="card__img"><span>Photo</span></div>
+          <img class="card__photo" src="assets/photos/build.jpg" alt="Participants planning together at an outdoor workshop table" width="1024" height="768" loading="lazy">
           <div class="card__body">
             <h3>Build</h3>
             <p>Support real projects, infrastructure, and community ownership.</p>

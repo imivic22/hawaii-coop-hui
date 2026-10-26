@@ -81,8 +81,9 @@ p{margin:0}
 .btn .arw{transition:transform .18s}
 .btn:hover .arw{transform:translateX(4px)}
 .btn:active{transform:translateY(1px)}
-.btn--dark{background:var(--forest);color:var(--on-forest)}
-.btn--dark:hover{background:var(--pine)}
+/* Dark buttons use the lighter Spectra blue from the hero/cohort. */
+.btn--dark{background:#2b6b72;color:var(--on-forest)}
+.btn--dark:hover{background:#1f565c}
 .btn--light{background:var(--cream);color:var(--forest)}
 .btn--light:hover{background:#fff}
 .btn--outline-light{background:transparent;color:var(--on-forest);border-color:var(--line-dark)}
@@ -267,7 +268,7 @@ p{margin:0}
 .cta__actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 
 /* ---------- Footer ---------- */
-.footer{background:var(--forest);color:var(--on-forest);position:relative;overflow:hidden;
+.footer{background:#1f565c;color:var(--on-forest);position:relative;overflow:hidden;--on-forest-muted:rgba(255,242,234,.9);
   padding-block:clamp(44px,6vw,72px)}
 .footer::before{content:"";position:absolute;inset:0;opacity:.26;
   background:var(--pattern);background-size:400px;mix-blend-mode:soft-light}
@@ -305,8 +306,9 @@ p{margin:0}
 @media (max-width:900px){.faq__grid{grid-template-columns:1fr;gap:28px}}
 
 /* ---------- Express Interest (form) ---------- */
-.interest{background:var(--forest-2);color:var(--on-forest);padding-block:clamp(60px,8vw,104px);
-  position:relative;overflow:hidden;isolation:isolate}
+/* Same lighter Spectra blue as the hero and cohort. */
+.interest{background:linear-gradient(160deg,#33797f 0%,#28666d 55%,#1f565c 100%);color:var(--on-forest);padding-block:clamp(60px,8vw,104px);
+  position:relative;overflow:hidden;isolation:isolate;--on-forest-muted:rgba(255,242,234,.9)}
 .interest::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.22;
   background:var(--pattern);background-size:400px;mix-blend-mode:soft-light}
 .interest__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Hawaiʻi Co-op Hui</title>
   <meta name="description" content="A network of people and cooperatives building a regenerative and just Hawaiʻi through shared resources, knowledge, and community ownership.">
-  <meta property="og:title" content="Hawaiʻi Co-op Hui — Stronger Together">
+  <meta property="og:title" content="Hawaiʻi Co-op Hui — Kūpaʻa Kākou">
   <meta property="og:description" content="A network of people and cooperatives building a regenerative and just Hawaiʻi through shared resources, knowledge, and community ownership.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://imivic22.github.io/hawaii-coop-hui/">
@@ -20,7 +20,7 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/TAYWatkins-web.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/TAYRugPull-web.woff2">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="styles.css?v=20261015e">
+  <link rel="stylesheet" href="styles.css?v=20261026b">
 </head>
 <body>
 <a class="skip" href="#about">Skip to content</a>
@@ -61,10 +61,13 @@
   <section class="hero" data-todo="hero-photo — set --hero-image in styles.css to url('assets/hero.jpg')">
     <div class="hero__inner">
       <div>
-        <h1>Stronger<br>Together.</h1>
+        <!-- The brand face (TAY Watkins) has no kahakō, so the Ū and Ā macrons are drawn in CSS (.kahako);
+             the real text stays in .sr-only for screen readers, search, and copy-paste. -->
+        <h1 class="hero__title"><span class="sr-only">Kūpaʻa Kākou</span><span aria-hidden="true">K<span class="kahako">U</span>PAʻA<br>K<span class="kahako">A</span>KOU</span></h1>
         <p class="hero__sub">A network of people and cooperatives building a regenerative and just Hawaiʻi through shared resources, knowledge, and community ownership.</p>
         <a class="btn btn--light" href="#get-involved">Join the Movement <span class="arw">&rarr;</span></a>
       </div>
+      <img class="hero__logo" src="assets/brand/emblem-parchment.svg" alt="" width="229" height="212">
       <aside class="hero__aside" aria-label="Our values">
         <ul class="hero__words">
           <li>ʻĀINA</li><li>HANA</li><li>ʻIKE</li><li>WAIWAI</li><li>MEAʻAI</li><li>KAIĀULU</li>
@@ -302,65 +305,9 @@
           <label for="f-email">Email</label>
           <input id="f-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
         </div>
-        <div class="field">
-          <label for="f-island">Which island are you on?</label>
-          <select id="f-island" name="island" required>
-            <option value="" selected disabled>Choose one…</option>
-            <option>Hawaiʻi Island</option>
-            <option>Maui</option>
-            <option>Molokaʻi</option>
-            <option>Lānaʻi</option>
-            <option>Oʻahu</option>
-            <option>Kauaʻi</option>
-            <option>Niʻihau</option>
-            <option>Other / off-island</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="f-audience">Which best describes you?</label>
-          <select id="f-audience" name="audience" required>
-            <option value="" selected disabled>Choose one…</option>
-            <option>Producer (farmer, rancher, or other grower)</option>
-            <option>Member or leader of an existing co-op</option>
-            <option>Part of an emerging co-op</option>
-            <option>Cooperative development practitioner</option>
-            <option>Ally, partner, or just curious</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="f-org">Farm, co-op, or organization <span class="opt">(optional)</span></label>
-          <input id="f-org" name="organization" type="text" placeholder="Optional" autocomplete="organization">
-        </div>
-        <div class="field">
-          <label for="f-interest">What are you most curious about? <span class="opt">(optional)</span></label>
-          <select id="f-interest" name="interest">
-            <option value="" selected>Choose one…</option>
-            <option>Joining the Hawaiʻi Co-op Cohort</option>
-            <option>Starting a co-op</option>
-            <option>Joining a co-op</option>
-            <option>Strengthening a co-op I'm already in</option>
-            <option>Turning my existing business into a co-op</option>
-            <option>Supporting co-ops in my community</option>
-            <option>Just learning for now</option>
-          </select>
-        </div>
-        <fieldset class="field field--full field--group">
-          <legend>How would you like to connect? <span class="opt">(check all that apply)</span></legend>
-          <div class="checks-row">
-            <label class="check"><input type="checkbox" name="connect[]" value="In-person meetups"> In-person meetups</label>
-            <label class="check"><input type="checkbox" name="connect[]" value="Virtual meetings"> Virtual meetings</label>
-            <label class="check"><input type="checkbox" name="connect[]" value="One-on-one call"> A one-on-one call</label>
-            <label class="check"><input type="checkbox" name="connect[]" value="Email"> Email</label>
-            <label class="check"><input type="checkbox" name="connect[]" value="Text or phone"> Text or phone</label>
-          </div>
-        </fieldset>
         <div class="field field--full">
-          <label for="f-message">Tell us a little more <span class="opt">(optional)</span></label>
+          <label for="f-message">Tell us a little more</label>
           <textarea id="f-message" name="message" placeholder="What you're working on, questions you have, or what you'd hope to get out of the cohort. A sentence or two is plenty."></textarea>
-        </div>
-        <div class="field--check">
-          <input id="f-updates" name="updates" type="checkbox" value="yes">
-          <label for="f-updates">It's OK to email me about the Hui and the cohort</label>
         </div>
 
         <p class="form__status" role="alert" hidden></p>

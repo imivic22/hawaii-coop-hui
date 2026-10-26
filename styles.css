@@ -305,7 +305,8 @@ p{margin:0}
 .cta__actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 
 /* ---------- Footer ---------- */
-.footer{background:#1f565c;color:var(--on-forest);position:relative;overflow:hidden;--on-forest-muted:rgba(255,242,234,.9);
+/* near-black Spectra so the page ends on a firm, dark base */
+.footer{background:#0b1f22;color:var(--on-forest);position:relative;overflow:hidden;--on-forest-muted:rgba(255,242,234,.9);
   padding-block:clamp(44px,6vw,72px)}
 .footer::before{content:"";position:absolute;inset:0;opacity:.26;
   background:var(--pattern);background-size:400px;mix-blend-mode:soft-light}

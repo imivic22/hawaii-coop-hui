@@ -197,26 +197,28 @@ p{margin:0}
 /* Cohort: same lighter Spectra blue as the hero; muted text raised to stay readable on the lighter ground. */
 .cohort{background:linear-gradient(160deg,#33797f 0%,#28666d 55%,#1f565c 100%);color:var(--on-forest);position:relative;overflow:hidden;
   --on-forest-muted:rgba(255,242,234,.9)}
-.cohort__grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
-.cohort__text{padding:clamp(56px,7vw,96px) clamp(28px,5vw,64px)}
-.cohort__text .max{max-width:520px;margin-left:auto}
+.cohort__grid{max-width:var(--maxw);margin:0 auto;padding:clamp(48px,5.5vw,72px) 28px;display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,560px);gap:clamp(32px,5vw,72px);align-items:center}
+.cohort__text{padding:0}
+.cohort__text .max{max-width:600px}
 .cohort h2{font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:1.2rem}
-.cohort__lead{color:var(--on-forest-muted);font-size:1.2rem;margin-bottom:2rem;max-width:46ch}
-.facts{display:grid;gap:1.1rem;margin-bottom:2.2rem}
+.cohort__lead{color:var(--on-forest-muted);font-size:1.2rem;margin-bottom:1.5rem}
+.facts{display:grid;gap:.8rem;margin-bottom:1.6rem}
 .fact{display:grid;grid-template-columns:26px 1fr;gap:14px;align-items:start}
 .fact svg{width:22px;height:22px;color:var(--wai-leaf);margin-top:2px}
 .fact p{color:var(--on-forest-muted);font-size:1.06rem}
 .fact strong{color:var(--on-forest);font-weight:700}
 .cohort__actions{display:flex;flex-wrap:wrap;gap:16px 22px;align-items:center}
-.cohort__media{position:relative;min-height:420px;
-  background:linear-gradient(180deg,rgba(17,49,55,0) 50%,rgba(17,49,55,.6)),url("assets/photos/cohort-kalo.jpg") center 40%/cover}
-.cohort__media .script{position:absolute;right:30px;bottom:28px;font-family:var(--font-script);
+.cohort__media{position:relative;margin:0;border-radius:18px;overflow:hidden;box-shadow:0 18px 44px rgba(9,28,29,.28)}
+.cohort__media img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.cohort__media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,49,55,0) 55%,rgba(17,49,55,.55));pointer-events:none}
+.cohort__media .script{position:absolute;z-index:1;right:22px;bottom:18px;font-family:var(--font-script);
   font-size:clamp(2.2rem,3.4vw,3rem);line-height:1.1;color:#fff;text-align:right;text-shadow:0 2px 12px rgba(0,0,0,.5)}
-.cohort__note{color:var(--on-forest-muted);font-size:1.1rem;max-width:44ch;margin-bottom:2rem}
+.cohort__note{color:var(--on-forest-muted);font-size:1.1rem;max-width:48ch;margin-bottom:1.6rem}
 .imgnote{position:absolute;left:16px;top:16px;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
   background:rgba(0,0,0,.35);color:#fff;padding:5px 9px;border-radius:6px}
 @media (max-width:860px){.cohort__grid{grid-template-columns:1fr}
-  .cohort__text .max{margin-left:0}.cohort__media{min-height:360px;order:-1}}
+  .cohort__text .max{margin-left:0}.cohort__media{order:-1}}
 
 /* ---------- Our Work ---------- */
 .work{background:var(--cream);padding-block:clamp(60px,8vw,104px)}
@@ -451,7 +453,7 @@ h1,h2,h3,h4{font-weight:400;font-synthesis:none;letter-spacing:.015em;line-heigh
 .statement__text{font-family:var(--font-display-2);font-style:normal;font-size:clamp(1.25rem,1.9vw,1.65rem);line-height:1.32;letter-spacing:.025em;
   color:var(--accent);margin:0;text-wrap:balance}
 .footer__quote{font-style:normal;font-size:clamp(1.05rem,1.9vw,1.45rem);line-height:1.15;letter-spacing:.02em;max-width:24ch}
-.cohort__media .script{font-family:var(--font-display-2);font-size:clamp(2.3rem,3.5vw,3.1rem);letter-spacing:.06em;line-height:1.08}
+.cohort__media .script{font-family:var(--font-display-2);font-size:clamp(1.35rem,2vw,1.85rem);letter-spacing:.06em;line-height:1.08}
 .form__success h3{font-size:1.3rem}
 .principle::before{font-family:var(--font-body)}
 
@@ -476,8 +478,8 @@ h1,h2,h3,h4{font-weight:400;font-synthesis:none;letter-spacing:.015em;line-heigh
 .nav .brand{gap:0}
 
 /* ---------- Hero logo + drawn kahakō ---------- */
-.hero__logo{justify-self:center;width:min(100%,420px);height:auto;aspect-ratio:1/1;object-fit:contain;box-sizing:border-box;
-  padding:8%;background:var(--cream);border-radius:50%;filter:drop-shadow(0 14px 34px rgba(9,28,29,.30))}  /* full-color emblem on a cream disc, like the nav */
+.hero__logo{justify-self:center;width:min(100%,460px);height:auto;aspect-ratio:1/1;object-fit:contain;box-sizing:border-box;
+  padding:4.5%;background:var(--cream);border-radius:50%;filter:drop-shadow(0 14px 34px rgba(9,28,29,.30))}  /* full-color emblem on a cream disc, like the nav */
 .kahako{position:relative;display:inline-block}
 .kahako::before{content:"";position:absolute;left:50%;transform:translateX(-50%);top:-.11em;
   width:.5em;height:.085em;border-radius:.03em;background:currentColor}

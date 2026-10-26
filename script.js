@@ -101,10 +101,3 @@
   });
 })();
 
-// TEMPORARY review switch (remove once the team picks a hero-logo treatment):
-// add ?logo=white to the address to see the all-cream emblem instead of the full-color one.
-(function () {
-  if (new URLSearchParams(location.search).get('logo') !== 'white') return;
-  var l = document.querySelector('.hero__logo');
-  if (l) { l.src = 'assets/brand/emblem-parchment.svg'; l.classList.add('hero__logo--white'); }
-})();

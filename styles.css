@@ -125,66 +125,58 @@ p{margin:0}
 @media (max-width:1000px){.nav__cta .btn{display:none}}
 
 /* ---------- Hero ---------- */
-/* Text on the left; on the right the full-color emblem inside a ring of the brand line
-   ("E kahe ka wai…") in TAY Rug Pull, with faint water ripples spreading out behind it.
-   The six values sit in a quiet band along the bottom of the first screen. */
+/* Text on the left; in the middle the full-color emblem inside a slowly turning ring of the
+   brand line ("E kahe ka wai…") in TAY Rug Pull; the six values stacked on the right. */
 .hero{position:relative;color:var(--on-forest);isolation:isolate;overflow:hidden;display:flex;flex-direction:column;
-  --medal:clamp(300px, min(40vw, calc(100vh - 260px)), 560px);
-  --medal:clamp(300px, min(40vw, calc(100svh - 260px)), 560px);
+  --medal:clamp(280px, min(34vw, calc(100vh - 260px)), 460px);
+  --medal:clamp(280px, min(34vw, calc(100svh - 260px)), 460px);
   min-height:clamp(580px, calc(100vh - 89px), 860px);           /* 89px = nav height */
   min-height:clamp(580px, calc(100svh - 89px), 860px);
-  /* lighter Spectra blue, brightest behind the emblem; a soft shade on the left keeps the text crisp */
+  /* lighter Spectra blue, brightest behind the emblem; soft shade at both sides keeps the text crisp */
   background:
-    linear-gradient(90deg, rgba(17,49,55,.28), rgba(17,49,55,.12) 45%, rgba(17,49,55,0) 68%),
-    radial-gradient(110% 95% at 72% 46%, #3e8a90, #2b6b72 55%, #215a61)}
+    linear-gradient(90deg, rgba(17,49,55,.26), rgba(17,49,55,.06) 38%, rgba(17,49,55,.06) 62%, rgba(17,49,55,.2)),
+    radial-gradient(110% 95% at 55% 46%, #3e8a90, #2b6b72 55%, #215a61)}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.28;
   background:var(--pattern);background-size:420px;mix-blend-mode:soft-light}
 .hero__inner{flex:1;width:100%;max-width:var(--maxw);margin:0 auto;
-  padding:clamp(40px,6vh,72px) 28px;display:grid;grid-template-columns:minmax(0,1fr) auto;
-  align-items:center;gap:clamp(32px,5vw,80px)}
-.hero__text{position:relative;z-index:1;min-width:0}   /* headline, sentence and button paint above the ripples */
-.hero h1{font-weight:400;font-size:clamp(3.4rem,6.8vw,6.25rem);line-height:1.06;letter-spacing:.012em;color:#fff;
+  padding:clamp(40px,6vh,72px) 28px;display:grid;grid-template-columns:minmax(0,1.2fr) var(--medal) minmax(0,.8fr);
+  align-items:center;gap:clamp(24px,3vw,44px)}
+.hero__text{min-width:0}
+.hero h1{font-weight:400;font-size:clamp(2.6rem,5vw,4.6rem);line-height:1.06;letter-spacing:.012em;color:#fff;
   text-shadow:0 2px 24px rgba(9,28,29,.16)}
 .hero__sub{max-width:27ch;font-size:clamp(1.15rem,1.55vw,1.4rem);line-height:1.5;color:var(--cream);
   margin:1.5rem 0 2.3rem;text-shadow:0 1px 14px rgba(9,28,29,.22)}
 .hero .btn{font-size:.86rem;padding:1.05em 1.9em;box-shadow:0 10px 26px rgba(9,28,29,.2)}
 
-/* emblem + word ring */
-.hero__medal{position:relative;width:var(--medal);aspect-ratio:1/1;justify-self:end;isolation:isolate}
+/* emblem + word ring (no outer rings: just the text band and the emblem) */
+.hero__medal{position:relative;width:var(--medal);aspect-ratio:1/1;justify-self:center}
 .hero__ring{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .hero__ring text{font-family:var(--font-display-2);font-size:32px;letter-spacing:7.6px;fill:var(--cream);white-space:pre}
 .hero__dot{fill:#f0c39c}
-.hero__hair{fill:none;stroke:var(--cream);stroke-opacity:.38;stroke-width:1.2}
-/* soft shade between the two hairlines so the ring text keeps 4.5:1 on the lightest blue */
+/* soft shade under the ring text so it keeps 4.5:1 on the lightest blue */
 .hero__track{fill:none;stroke:#113137;stroke-opacity:.3;stroke-width:52}
 .hero__emblem{position:absolute;left:50%;top:50%;width:62%;height:auto;
   transform:translate(-50%,-50%);filter:drop-shadow(0 14px 30px rgba(9,28,29,.24))}
-.hero__ripples{position:absolute;left:50%;top:50%;width:220%;height:220%;max-width:none;
-  transform:translate(-50%,-50%);z-index:-1;pointer-events:none;fill:none;stroke:var(--cream);stroke-width:1.4}
 @media (prefers-reduced-motion:no-preference){
   .hero__ring{animation:hero-turn 180s linear infinite}   /* one slow turn every 3 minutes */
 }
 @keyframes hero-turn{to{transform:rotate(360deg)}}
 
-/* values band */
-.hero__band{position:relative;background:rgba(17,49,55,.2);border-top:1px solid rgba(255,242,234,.16)}
-.hero__values{list-style:none;margin:0 auto;padding:0 28px;max-width:var(--maxw);
-  display:grid;grid-template-columns:repeat(6,1fr)}
-.hero__values li{position:relative;text-align:center;padding:20px 6px 22px;
-  font-family:var(--font-display-2);font-size:1.2rem;line-height:1.2;letter-spacing:.16em;color:var(--cream)}
-.hero__values li+li::before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;
-  border-radius:50%;background:#f0c39c;opacity:.75;transform:translate(-50%,-50%)}
+/* values, stacked on the right */
+.hero__values{list-style:none;margin:0;padding:0;justify-self:end;text-align:right;display:grid;gap:.6rem}
+.hero__values li{font-family:var(--font-display-2);font-size:1.5rem;line-height:1.2;letter-spacing:.14em;color:var(--cream)}
 
 @media (max-width:900px){
   .hero{min-height:0}
   .hero__inner{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center;
-    padding:52px 20px 48px;gap:44px}
+    padding:52px 20px 48px;gap:40px}
   .hero__sub{margin-inline:auto}
-  .hero__medal{width:min(80vw,380px);justify-self:center}
-  .hero__ripples{width:175%;height:175%}
-  .hero__values{grid-template-columns:repeat(3,1fr);padding:6px 20px}
-  .hero__values li{padding:9px 4px;font-size:1.05rem;letter-spacing:.12em}
-  .hero__values li:nth-child(3n+1)::before{display:none}
+  .hero__medal{width:min(80vw,360px)}
+  /* values: a centered 3 × 2 grid with small dots between the words in each row */
+  .hero__values{justify-self:stretch;text-align:center;grid-template-columns:repeat(3,1fr);gap:0;width:100%;max-width:440px;margin-inline:auto}
+  .hero__values li{position:relative;padding:8px 4px;font-size:1.05rem;letter-spacing:.12em}
+  .hero__values li:not(:nth-child(3n+1))::before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;
+    border-radius:50%;background:#f0c39c;opacity:.75;transform:translate(-50%,-50%)}
 }
 @media (max-width:420px){
   .hero h1{font-size:clamp(2.7rem,14vw,3.4rem)}

@@ -46,13 +46,13 @@ Applied from the guidelines PDF:
   and `pattern.svg` (the seamless brand pattern with its parchment background removed so it
   tiles over any color). The nav pairs the full-color emblem with the Watkins wordmark
   cropped (viewBox only, no path edits) from the all-dark Spectra lockup, at the Secondary
-  Logo's own proportions; the footer uses the Parchment lockup intact. The values row uses
+  Logo's own proportions; the footer uses the same layout with the cream-backed full-color emblem (`emblem-backed.svg`) and the wordmark recolored to Parchment (`wordmark-parchment.svg`). The values row uses
   `line-*.svg`: outlined single-color versions made from each official icon's own dark layer
   (its ring plus line drawing); `line-ike.svg` and `line-hana.svg` are companion icons in the
   same style — swap in official ones if they get made. `favicon.png` / `og-image.png` are downsized from the package.
 - **Type**: body is **Inter** (Google Fonts). The brand display faces are self-hosted in
   `assets/fonts/`: **TAY Watkins** (headings, footer quote) and **TAY Rug Pull** (hero word
-  ring and values band, the mauka-to-makai statement, the cohort overlay). Both are caps-only and single
+  ring and values column, the mauka-to-makai statement, the cohort overlay). Both are caps-only and single
   weight, so everything set in them renders in capitals and headings use `font-weight:400`
   with `font-synthesis:none`. Watkins has no kahakō vowels or dashes — keep Hawaiian words with
   kahakō and any em dashes out of Watkins headings (use Rug Pull there). The `-web.woff2` copies

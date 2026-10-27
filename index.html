@@ -20,7 +20,7 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/TAYWatkins-web.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/TAYRugPull-web.woff2">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="styles.css?v=20261026p">
+  <link rel="stylesheet" href="styles.css?v=20261026q">
 </head>
 <body>
 <a class="skip" href="#about">Skip to content</a>
@@ -69,27 +69,16 @@
       </div>
 
       <!-- Emblem with the brand line set in Rug Pull around it (like the Primary Logo's circular text).
-           Ripples spread out behind it; only the word ring turns, very slowly, and not at all
-           when the visitor prefers reduced motion. -->
+           Only the word ring turns, very slowly, and not at all when the visitor prefers reduced motion. -->
       <div class="hero__medal">
-        <svg class="hero__ripples" viewBox="-572 -572 1144 1144" aria-hidden="true" focusable="false">
-          <circle r="318" stroke-opacity=".2"/>
-          <circle r="392" stroke-opacity=".14" stroke-dasharray="640 26 380 22 900 30 465"/>
-          <circle r="478" stroke-opacity=".09"/>
-          <circle r="566" stroke-opacity=".06" stroke-dasharray="1100 34 620 40 1280 28 454"/>
-        </svg>
         <svg class="hero__ring" viewBox="-260 -260 520 520" role="img" aria-label="E kahe ka wai. E kahe ke waiwai. E ola ke kaiāulu.">
           <defs><path id="hero-ring-path" d="M-185.33,-107A214,214 0 1,1 185.33,107A214,214 0 1,1 -185.33,-107"/></defs>
           <circle class="hero__track" r="223"/>
-          <circle class="hero__hair" r="197"/>
-          <circle class="hero__hair" r="249"/>
           <text><textPath href="#hero-ring-path">E KAHE KA WAI <tspan class="hero__dot">•</tspan> E KAHE KE WAIWAI <tspan class="hero__dot">•</tspan> E OLA KE KAIĀULU <tspan class="hero__dot">•</tspan> </textPath></text>
         </svg>
         <img class="hero__emblem" src="assets/brand/emblem-backed.svg" alt="" width="234" height="217">
       </div>
-    </div>
 
-    <div class="hero__band">
       <ul class="hero__values" aria-label="Our values">
         <li>ʻĀINA</li><li>HANA</li><li>ʻIKE</li><li>WAIWAI</li><li>MEAʻAI</li><li>KAIĀULU</li>
       </ul>
@@ -352,11 +341,15 @@
       <p class="footer__sub">E kahe ka wai. E kahe ke waiwai. E ola ke kaiāulu.</p>
     </div>
     <div class="footer__brand">
-      <img class="brand__logo" src="assets/brand/logo-secondary-parchment.svg" alt="Hawaiʻi Co-op Hui" width="180" height="68">
+      <!-- Full-color emblem (cream-backed so it reads on the dark blue) + the official wordmark in Parchment -->
+      <span class="brand__lockup">
+        <img class="brand__emblem" src="assets/brand/emblem-backed.svg" alt="" width="73" height="68">
+        <img class="brand__wordmark" src="assets/brand/wordmark-parchment.svg" alt="Hawaiʻi Co-op Hui" width="95" height="36">
+      </span>
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=20261026p"></script>
+<script src="script.js?v=20261026q"></script>
 </body>
 </html>

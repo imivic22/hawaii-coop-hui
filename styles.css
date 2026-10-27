@@ -162,9 +162,10 @@ p{margin:0}
 }
 @keyframes hero-turn{to{transform:rotate(360deg)}}
 
-/* values, stacked on the right */
-.hero__values{list-style:none;margin:0;padding:0;justify-self:end;text-align:right;display:grid;gap:.6rem}
-.hero__values li{font-family:var(--font-display-2);font-size:1.5rem;line-height:1.2;letter-spacing:.14em;color:var(--cream)}
+/* values, stacked on the right and spread over the ring's full height (its outer edge is 96% of the medal box) */
+.hero__values{list-style:none;margin:0;padding:0;justify-self:end;text-align:right;
+  display:flex;flex-direction:column;justify-content:space-between;height:calc(var(--medal) * .96)}
+.hero__values li{font-family:var(--font-display-2);font-size:clamp(1.5rem,2.2vw,2.15rem);line-height:1;letter-spacing:.14em;color:var(--cream)}
 
 @media (max-width:900px){
   .hero{min-height:0}
@@ -173,7 +174,7 @@ p{margin:0}
   .hero__sub{margin-inline:auto}
   .hero__medal{width:min(80vw,360px)}
   /* values: a centered 3 × 2 grid with small dots between the words in each row */
-  .hero__values{justify-self:stretch;text-align:center;grid-template-columns:repeat(3,1fr);gap:0;width:100%;max-width:440px;margin-inline:auto}
+  .hero__values{display:grid;height:auto;justify-self:stretch;text-align:center;grid-template-columns:repeat(3,1fr);gap:0;width:100%;max-width:440px;margin-inline:auto}
   .hero__values li{position:relative;padding:8px 4px;font-size:1.05rem;letter-spacing:.12em}
   .hero__values li:not(:nth-child(3n+1))::before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;
     border-radius:50%;background:#f0c39c;opacity:.75;transform:translate(-50%,-50%)}

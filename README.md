@@ -51,8 +51,8 @@ Applied from the guidelines PDF:
   (its ring plus line drawing); `line-ike.svg` and `line-hana.svg` are companion icons in the
   same style — swap in official ones if they get made. `favicon.png` / `og-image.png` are downsized from the package.
 - **Type**: body is **Inter** (Google Fonts). The brand display faces are self-hosted in
-  `assets/fonts/`: **TAY Watkins** (headings, footer quote) and **TAY Rug Pull** (hero word
-  ring and values column, the mauka-to-makai statement, the cohort overlay). Both are caps-only and single
+  `assets/fonts/`: **TAY Watkins** (headings, footer quote) and **TAY Rug Pull** (hero values
+  column, the mauka-to-makai statement, the cohort overlay). Both are caps-only and single
   weight, so everything set in them renders in capitals and headings use `font-weight:400`
   with `font-synthesis:none`. Watkins has no kahakō vowels or dashes — keep Hawaiian words with
   kahakō and any em dashes out of Watkins headings (use Rug Pull there). The `-web.woff2` copies

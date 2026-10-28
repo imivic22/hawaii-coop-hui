@@ -20,8 +20,8 @@ python3 -m http.server 8000
 `index.html` (single scroll, top-nav anchors): Hero → About/values (wave + 6 line icons) → Co-op Cohort
 → Why a co-op (one section, five accordion dropdowns: what a co-op is · the seven principles · what a
 co-op can look like in Hawaiʻi · what the cohort is aiming for · who it's for) → Our Work → Express
-Interest form → Footer. `collaboration.html` (nav "Collaboration"): readings/listening links and session recordings,
-with room for the food/bill collaboration piece Keoni mentioned; `resources.html` just forwards there. Both pages share `styles.css`/`script.js`; bump the `?v=` on those
+Interest form → Footer. `resources.html` (nav "Resources"): readings/listening links and the Zoom session recordings
+(link cards — Zoom cloud recordings can't be embedded), with room for the food/bill piece Keoni mentioned; `collaboration.html` just forwards there. Both pages share `styles.css`/`script.js`; bump the `?v=` on those
 links when you change them so visitors don't get a cached copy.
 ## Photos still needed (search `data-todo`)
 The mockup uses real photography that isn't in this repo yet — placeholders are in place:
@@ -31,7 +31,7 @@ The mockup uses real photography that isn't in this repo yet — placeholders ar
 
 ## Other content to confirm
 - `express-interest-link` — the Express Interest / sign-up form URL
-- Real **recordings** — paste YouTube/Vimeo links; embed template is in the Resources markup
+- More **recordings** — copy a `.rec__card` in `resources.html` and swap the Zoom link, date, title, line, and speakers
 - Final **logo** — swap the inline SVG emblem in the nav + footer
 - Copy review — cohort dates (Dec 2026 – Nov 2027) and all Hawaiian text/ʻokina/kahakō
 

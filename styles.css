@@ -125,61 +125,38 @@ p{margin:0}
 @media (max-width:1000px){.nav__cta .btn{display:none}}
 
 /* ---------- Hero ---------- */
-/* Text on the left; the full-color emblem with its cream outline in the middle, as tall as the
-   headline-to-button block; the six values stacked on the right. */
+/* Text on the left; the full-color emblem with its cream outline large on the right. */
 .hero{position:relative;color:var(--on-forest);isolation:isolate;overflow:hidden;display:flex;flex-direction:column;
-  --h1:clamp(2.6rem,5vw,4.6rem);
-  --logo-w:clamp(260px, 33vw, 410px);                           /* width of the middle column */
+  /* logo width: up to 42% of the screen, never taller than the space under the nav */
+  --logo:clamp(300px, min(42vw, calc((100vh - 190px) * 1.077)), 560px);
+  --logo:clamp(300px, min(42vw, calc((100svh - 190px) * 1.077)), 560px);
   min-height:clamp(580px, calc(100vh - 89px), 860px);           /* 89px = nav height */
   min-height:clamp(580px, calc(100svh - 89px), 860px);
-  /* lighter Spectra blue, brightest behind the emblem; soft shade at both sides keeps the text crisp */
+  /* lighter Spectra blue, brightest behind the logo; a soft shade on the left keeps the text crisp */
   background:
-    linear-gradient(90deg, rgba(17,49,55,.26), rgba(17,49,55,.06) 38%, rgba(17,49,55,.06) 62%, rgba(17,49,55,.2)),
-    radial-gradient(110% 95% at 55% 46%, #3e8a90, #2b6b72 55%, #215a61)}
+    linear-gradient(90deg, rgba(17,49,55,.28), rgba(17,49,55,.12) 45%, rgba(17,49,55,0) 68%),
+    radial-gradient(110% 95% at 72% 46%, #3e8a90, #2b6b72 55%, #215a61)}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.28;
   background:var(--pattern);background-size:420px;mix-blend-mode:soft-light}
-.hero__inner{flex:1;width:100%;max-width:var(--maxw);margin:0 auto;
-  padding:clamp(40px,6vh,72px) 28px;display:grid;grid-template-columns:minmax(0,1.2fr) var(--logo-w) minmax(0,.8fr);
-  /* the text, the logo and the values share the middle row, so the logo and the values column
-     are exactly as tall as the headline-to-button block */
-  grid-template-rows:1fr auto 1fr;align-items:center;gap:0 clamp(24px,3vw,44px)}
-.hero__text{min-width:0;grid-column:1;grid-row:2}
-.hero h1{font-weight:400;font-size:var(--h1);line-height:1.06;letter-spacing:.012em;color:#fff;
+.hero__inner{flex:1;width:100%;max-width:var(--maxw);margin:0 auto;padding:clamp(40px,6vh,72px) 28px;
+  display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:clamp(32px,5vw,80px)}
+.hero__text{min-width:0}
+.hero h1{font-weight:400;font-size:clamp(3.4rem,6.8vw,6.25rem);line-height:1.06;letter-spacing:.012em;color:#fff;
   text-shadow:0 2px 24px rgba(9,28,29,.16)}
 .hero__sub{max-width:27ch;font-size:clamp(1.15rem,1.55vw,1.4rem);line-height:1.5;color:var(--cream);
   margin:1.5rem 0 2.3rem;text-shadow:0 1px 14px rgba(9,28,29,.22)}
 .hero .btn{font-size:.86rem;padding:1.05em 1.9em;box-shadow:0 10px 26px rgba(9,28,29,.2)}
-
-/* the logo: its top meets the macron over the headline's Ū, its bottom the bottom of the button */
-.hero__logo{grid-column:2;grid-row:2;align-self:stretch;position:relative;margin:calc(var(--h1) * -.11) 0 0}
-.hero__logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;
-  filter:drop-shadow(0 12px 30px rgba(9,28,29,.22))}
-
-/* values, stacked on the right and spread from the top of the headline to the bottom of the button */
-.hero__values{list-style:none;padding:0;grid-column:3;grid-row:2;align-self:stretch;justify-self:end;text-align:right;
-  display:flex;flex-direction:column;justify-content:space-between;font-size:clamp(1.6rem,3vw,2.6rem);
-  /* optical alignment: the macron over Ā meets the one over the headline's Ū, and the last
-     word's baseline meets the bottom of the button */
-  margin:calc(var(--h1) * -.11 + .05em) 0 -.23em}
-.hero__values li{font-family:var(--font-display-2);font-size:inherit;line-height:1;letter-spacing:.14em;color:var(--cream)}
+.hero__logo{width:var(--logo);justify-self:end}
+.hero__logo img{display:block;width:100%;height:auto;filter:drop-shadow(0 14px 32px rgba(9,28,29,.24))}
 
 @media (max-width:900px){
   .hero{min-height:0}
-  .hero__inner{grid-template-columns:minmax(0,1fr);grid-template-rows:none;justify-items:center;text-align:center;
-    padding:52px 20px 48px;gap:40px}
-  .hero__text,.hero__logo,.hero__values{grid-column:auto;grid-row:auto}
+  .hero__inner{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center;padding:48px 20px 52px;gap:36px}
   .hero__sub{margin-inline:auto}
-  .hero__logo{align-self:auto;margin:0;width:min(64vw,280px)}
-  .hero__logo img{position:static;height:auto}
-  /* values: a centered 3 × 2 grid with small dots between the words in each row */
-  .hero__values{display:grid;height:auto;justify-self:stretch;text-align:center;grid-template-columns:repeat(3,1fr);gap:0;width:100%;max-width:440px;margin:0 auto}
-  .hero__values li{position:relative;padding:8px 4px;font-size:1.05rem;letter-spacing:.12em}
-  .hero__values li:not(:nth-child(3n+1))::before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;
-    border-radius:50%;background:#f0c39c;opacity:.75;transform:translate(-50%,-50%)}
+  .hero__logo{width:min(72vw,320px);justify-self:center}
 }
 @media (max-width:420px){
   .hero h1{font-size:clamp(2.7rem,14vw,3.4rem)}
-  .hero__values li{font-size:.95rem;letter-spacing:.1em}
 }
 
 /* ---------- Statement + waves ---------- */

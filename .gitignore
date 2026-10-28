@@ -6,3 +6,6 @@ node_modules/
 
 # Raw brand source package (EPS/AI/JPG) — kept locally, not published
 Hawai'i Co-op Hui Brand Package/
+
+# Working handoff for the designer (not part of the site)
+astro-brief/

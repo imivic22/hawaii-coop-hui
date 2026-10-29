@@ -91,4 +91,6 @@ mockup art (3600×600, transparent background, the eight brand colors only), so 
 any screen size. To swap it, replace the file and bump the `?v=` on the `<img>` in `index.html`.
 
 ## Deploy
-Any static host: Netlify/Vercel (drag-and-drop the folder or connect the repo), or GitHub Pages.
+Live at **https://hawaiicoophui.org** — GitHub Pages from `main` (root); pushing to `main` deploys in about a minute.
+The `CNAME` file holds the custom domain (GitHub manages it; don't delete it). DNS is at GoDaddy: four `A` records for `@`
+(185.199.108.153, .109.153, .110.153, .111.153) and a `CNAME` for `www` → `imivic22.github.io`.

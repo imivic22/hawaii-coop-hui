@@ -20,7 +20,7 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/TAYWatkins-web.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/TAYRugPull-web.woff2">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="styles.css?v=20261028f">
+  <link rel="stylesheet" href="styles.css?v=20261028h">
 </head>
 <body>
 <a class="skip" href="#about">Skip to content</a>
@@ -44,13 +44,15 @@
         <li><a href="#why-coop">Why a co-op</a></li>
         <li><a href="#our-work">Our Work</a></li>
         <li><a href="resources.html">Resources</a></li>
+        <li class="nav__menu-cta"><a class="btn btn--dark" href="#get-involved">Express Interest <span class="arw">&rarr;</span></a></li>
       </ul>
     </nav>
 
     <div class="nav__cta" style="display:flex;align-items:center;gap:10px">
       <a class="btn btn--dark" href="#get-involved">Express Interest <span class="arw">&rarr;</span></a>
       <button class="navtoggle" id="navtoggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg class="navtoggle__bars" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg class="navtoggle__x" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
     </div>
   </div>
@@ -68,9 +70,12 @@
         <a class="btn btn--light" href="#get-involved">Join the Movement <span class="arw">&rarr;</span></a>
       </div>
 
-      <!-- The full-color emblem with its cream outline, large on the right -->
+      <!-- The full-color emblem with its cream outline, as tall as the headline-to-button block -->
       <div class="hero__logo" aria-hidden="true"><img src="assets/brand/emblem-backed.svg" alt="" width="234" height="217"></div>
 
+      <ul class="hero__values" aria-label="What we do">
+        <li>LEARN</li><li>CONNECT</li><li>BUILD</li>
+      </ul>
     </div>
   </section>
 
@@ -80,7 +85,7 @@
          text; the right one is a mirrored copy pointing back in. Both use assets/brand/wave.svg. -->
     <div class="statement__row">
       <div class="statement__wave statement__wave--l" aria-hidden="true"></div>
-      <p class="statement__text">Like the wai that moves from mauka to makai, we believe in an economy where resources circulate, nourish, and return — strengthening our communities for generations to come.</p>
+      <p class="statement__text">Like the wai that moves from mauka to makai, we believe in an economy where resources circulate, nourish, and return &#8288;— strengthening our communities for generations to come.</p>
       <div class="statement__wave statement__wave--r" aria-hidden="true"></div>
     </div>
   </section>
@@ -167,9 +172,9 @@
         <details class="acc__item">
           <summary>What is a co-op?</summary>
           <div class="acc__body">
-            <p><strong>What it is.</strong> A co-op is a business owned by the people who use it or work in it — not outside investors. Members put in money or work, vote on the big decisions, and share the surplus.</p>
+            <p><strong>What it is.</strong> A co-op is a business owned by the people who use it or work in it&nbsp;— not outside investors. Members put in money or work, vote on the big decisions, and share the surplus.</p>
             <p><strong>Why it works.</strong> One owner carries all the risk. In a co-op, risk and reward are shared, every member gets one vote, and everyone is genuinely invested.</p>
-            <p><strong>Why here.</strong> Laulima — many hands working together. A co-op is the legal structure for the same thing, and it keeps waiwai home, circulating in the kaiāulu instead of leaving.</p>
+            <p><strong>Why here.</strong> Laulima&nbsp;— many hands working together. A <span class="nw">co-op</span> is the legal structure for the same thing, and it keeps waiwai home, circulating in the kaiāulu instead of leaving.</p>
           </div>
         </details>
         <details class="acc__item">
@@ -194,21 +199,21 @@
             <div class="items items--2">
                     <article class="item">
                       <h3>Producer or marketing co-op</h3>
-                      <p>Each member keeps their own farm; together they own the shared piece — a brand, a cooler, a truck, a wholesale relationship. Think: a valley of small farms that can't each fill a big order alone, selling under one name.</p>
+                      <p>Each member keeps their own farm; together they own the shared piece&nbsp;— a brand, a cooler, a truck, a wholesale relationship. Think: a valley of small farms that can't each fill a big order alone, selling under one name.</p>
                       <p class="meta">Owned by the farms or ranches that sell through it</p>
                     </article>
                     <article class="item">
-                      <h3>Worker-owned co-op</h3>
+                      <h3><span class="nw">Worker-owned</span> co-op</h3>
                       <p>The crew owns the business and votes on how it runs. Think: a shared kitchen turning kalo, ʻulu, and surplus fruit into products, where the people who show up every morning are also the owners.</p>
                       <p class="meta">Owned by the people who do the work</p>
                     </article>
                     <article class="item">
                       <h3>Shared services or purchasing co-op</h3>
-                      <p>Members pool buying power or share big-ticket things no single farm needs full time. Think: ranchers going in together on feed, fencing, and a portable chute, or growers sharing one bookkeeper.</p>
+                      <p>Members pool buying power or share <span class="nw">big-ticket</span> things no single farm needs full time. Think: ranchers going in together on feed, fencing, and a portable chute, or growers sharing one bookkeeper.</p>
                       <p class="meta">Owned by the businesses that use it</p>
                     </article>
                     <article class="item">
-                      <h3>Multi-stakeholder co-op</h3>
+                      <h3><span class="nw">Multi-stakeholder</span> co-op</h3>
                       <p>Farmers, workers, and community members each hold a seat. Think: a food hub where the growers who supply it, the staff who run it, and the families who buy from it all elect the board.</p>
                       <p class="meta">Owned by more than one kind of member</p>
                     </article>
@@ -219,10 +224,10 @@
           <summary>What the cohort is aiming for</summary>
           <div class="acc__body">
             <ul class="checks">
-                          <li><span><strong>Co-op literacy.</strong> We'll work on being able to explain what a co-op is, which kind fits your situation, and what it takes to run one.</span></li>
+                          <li><span><strong>Co-op literacy.</strong> We'll work on being able to explain what a <span class="nw">co-op</span> is, which kind fits your situation, and what it takes to run one.</span></li>
                           <li><span><strong>Skills to run a business with other people.</strong> We'll practice how members make decisions, govern together, and keep the thing running when there's more than one owner.</span></li>
-                          <li><span><strong>Pilina across the pae ʻāina.</strong> Pilina means relationship, or connection, and the pae ʻāina is the whole island chain. Our aim is that you leave with people on other islands doing the same work — people you can actually call.</span></li>
-                          <li><span><strong>Support for your real project.</strong> Our aim is that you bring what you're working on — a co-op you're starting, strengthening, or helping — and get to work it through with others.</span></li>
+                          <li><span><strong>Pilina across the pae ʻāina.</strong> Pilina means relationship, or connection, and the pae ʻāina is the whole island chain. Our aim is that you leave with people on other islands doing the same work&nbsp;— people you can actually call.</span></li>
+                          <li><span><strong>Support for your real project.</strong> Our aim is that you bring what you're working on&nbsp;— a co-op you're starting, strengthening, or helping&nbsp;— and get to work it through with others.</span></li>
                           <li><span><strong>The Hui after the cohort.</strong> The cohort ends in November 2027; the Hui doesn't. The Hui is a network, not a one-year program, and the cohort is one way in.</span></li>
                         </ul>
           </div>
@@ -248,7 +253,7 @@
       <div class="work__intro">
         <p class="eyebrow">Our Work</p>
         <h2>Strengthening an ecosystem of cooperatives across Hawaiʻi</h2>
-        <p>The Hawaiʻi Co-op Hui connects people, organizations, and resources to grow a thriving cooperative economy rooted in ʻāina, culture, and community self-determination.</p>
+        <p>The Hawaiʻi Co-op Hui connects people, organizations, and resources to grow a thriving cooperative economy rooted in ʻāina, culture, and community <span class="nw">self-determination</span>.</p>
         <a class="btn btn--dark" href="#about">About Our Work <span class="arw">&rarr;</span></a>
       </div>
       <div class="cards">
@@ -286,7 +291,7 @@
       <div class="interest__intro">
         <p class="eyebrow eyebrow--light">E komo mai</p>
         <h2>Tell us what you're growing.</h2>
-        <p>Curious about the cohort, thinking about a co-op, or already in one? Start here — this isn't a commitment, it just lets us know you're out there.</p>
+        <p>Curious about the cohort, thinking about a co-op, or already in one? Start here&nbsp;— this isn't a commitment, it just lets us know you're out there.</p>
         <p class="contact">Prefer email? Write to <a href="mailto:kaimi@purplemaia.org">kaimi@purplemaia.org</a>.</p>
       </div>
 
@@ -327,7 +332,7 @@
   <div class="footer__inner">
     <div>
       <p class="footer__quote">"When the resources flow, the people flourish."</p>
-      <p class="footer__sub">E kahe ka wai. E kahe ke waiwai. E ola ke kaiāulu.</p>
+      <p class="footer__sub">E&nbsp;kahe&nbsp;ka&nbsp;wai. E&nbsp;kahe&nbsp;ke&nbsp;waiwai. E&nbsp;ola&nbsp;ke&nbsp;kaiāulu.</p>
     </div>
     <div class="footer__brand">
       <!-- Full-color emblem (cream-backed so it reads on the dark blue) + the official wordmark in Parchment -->
@@ -339,6 +344,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=20261028f"></script>
+<script src="script.js?v=20261028h"></script>
 </body>
 </html>

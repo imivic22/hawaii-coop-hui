@@ -27,7 +27,8 @@
 // Active-section highlight
 (function () {
   var map = {};
-  document.querySelectorAll('.nav__links a').forEach(function (a) {
+  // (the phone menu's Express Interest button is a call to action, not a section link)
+  document.querySelectorAll('.nav__links li:not(.nav__menu-cta) a').forEach(function (a) {
     var id = a.getAttribute('href').slice(1);
     if (id) map[id] = a;
   });

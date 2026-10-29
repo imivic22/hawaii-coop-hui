@@ -12,3 +12,6 @@ astro-brief/
 
 # Design drafts kept for later (not part of the site)
 drafts/
+
+# Temporary measuring/screenshot pages made during reviews (never publish)
+_*.html

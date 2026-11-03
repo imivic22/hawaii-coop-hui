@@ -27,7 +27,7 @@
 // Active-section highlight
 (function () {
   var map = {};
-  // (the phone menu's Express Interest button is a call to action, not a section link)
+  // (the phone menu's mailing-list button is a call to action, not a section link)
   document.querySelectorAll('.nav__links li:not(.nav__menu-cta) a').forEach(function (a) {
     var id = a.getAttribute('href').slice(1);
     if (id) map[id] = a;
@@ -51,7 +51,7 @@
   });
 })();
 
-// Express Interest form — posts to Formspree in the background and shows an inline
+// Mailing list form — posts to Formspree in the background and shows an inline
 // success state. Until a real Formspree ID is set on the form's action, the button
 // falls back to a prefilled email so it still works.
 (function () {
@@ -79,7 +79,7 @@
         if (k.charAt(0) !== '_' && String(v).trim()) lines.push(k.replace(/\[\]$/, '') + ': ' + v);
       });
       window.location.href = 'mailto:' + fallback +
-        '?subject=' + encodeURIComponent('Express interest — Hawaiʻi Co-op Hui') +
+        '?subject=' + encodeURIComponent('Mailing list signup — Hawaiʻi Co-op Hui') +
         '&body=' + encodeURIComponent(lines.join('\n'));
       return;
     }

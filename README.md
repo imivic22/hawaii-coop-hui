@@ -30,7 +30,6 @@ The mockup uses real photography that isn't in this repo yet — placeholders ar
 - Real, rights-cleared images only — tell me the source and I'll wire them in.
 
 ## Other content to confirm
-- `express-interest-link` — the Express Interest / sign-up form URL
 - More **recordings** — copy a `.rec__card` in `resources.html` and swap the Zoom link, date, title, line, and speakers
 - Final **logo** — swap the inline SVG emblem in the nav + footer
 - Copy review — cohort dates (Dec 2026 – Nov 2027) and all Hawaiian text/ʻokina/kahakō
@@ -70,7 +69,7 @@ It deliberately avoids: cost, stipends, deadlines, application/selection process
 participant numbers, staff names, partners beyond the WSARE grant, statistics, and real Hawaiʻi
 co-ops (the four examples are labeled "Imagined example").
 
-**Express Interest form** posts to Formspree (`https://formspree.io/f/xvkgydze`, free tier,
+**Mailing list form** ("Join the Mailing List" — name, email, optional note) posts to Formspree (`https://formspree.io/f/xvkgydze`, free tier,
 notifications to kaimi@purplemaia.org). Handler in `script.js`: background submit, inline
 "Mahalo" state, honeypot (`_gotcha`), and a mailto fallback if the action is ever unset.
 Formspree emails an ownership confirmation on the very first submission — confirm it once.

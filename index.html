@@ -20,7 +20,7 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/TAYWatkins-web.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/TAYRugPull-web.woff2">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="styles.css?v=20261028h">
+  <link rel="stylesheet" href="styles.css?v=20261102a">
 </head>
 <body>
 <a class="skip" href="#about">Skip to content</a>
@@ -44,12 +44,12 @@
         <li><a href="#why-coop">Why a co-op</a></li>
         <li><a href="#our-work">Our Work</a></li>
         <li><a href="resources.html">Resources</a></li>
-        <li class="nav__menu-cta"><a class="btn btn--dark" href="#get-involved">Express Interest <span class="arw">&rarr;</span></a></li>
+        <li class="nav__menu-cta"><a class="btn btn--dark" href="#get-involved">Join the Mailing List <span class="arw">&rarr;</span></a></li>
       </ul>
     </nav>
 
     <div class="nav__cta" style="display:flex;align-items:center;gap:10px">
-      <a class="btn btn--dark" href="#get-involved">Express Interest <span class="arw">&rarr;</span></a>
+      <a class="btn btn--dark" href="#get-involved">Join the Mailing List <span class="arw">&rarr;</span></a>
       <button class="navtoggle" id="navtoggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
         <svg class="navtoggle__bars" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
         <svg class="navtoggle__x" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
@@ -73,8 +73,8 @@
       <!-- The full-color emblem with its cream outline, as tall as the headline-to-button block -->
       <div class="hero__logo" aria-hidden="true"><img src="assets/brand/emblem-backed.svg" alt="" width="234" height="217"></div>
 
-      <ul class="hero__values" aria-label="What we do">
-        <li>LEARN</li><li>CONNECT</li><li>BUILD</li>
+      <ul class="hero__values" aria-label="Our values">
+        <li>ʻĀINA</li><li>HANA</li><li>ʻIKE</li><li>WAIWAI</li><li>MEAʻAI</li><li>KAIĀULU</li>
       </ul>
     </div>
   </section>
@@ -145,7 +145,7 @@
           </li>
         </ul>
         <div class="cohort__actions">
-          <a class="btn btn--light" href="#get-involved">Express Interest <span class="arw">&rarr;</span></a>
+          <a class="btn btn--light" href="#get-involved">Join the Mailing List <span class="arw">&rarr;</span></a>
           <p class="cohort__note">No <span class="cohort__nw">co-op</span> needed yet.</p>
         </div>
       </div>
@@ -290,13 +290,13 @@
     <div class="wrap interest__grid">
       <div class="interest__intro">
         <p class="eyebrow eyebrow--light">E komo mai</p>
-        <h2>Tell us what you're growing.</h2>
-        <p>Curious about the cohort, thinking about a co-op, or already in one? Start here&nbsp;— this isn't a commitment, it just lets us know you're out there.</p>
+        <h2>Join our mailing list.</h2>
+        <p>Get looped into future co-op programs, workshops, and events across Hawaiʻi.</p>
         <p class="contact">Prefer email? Write to <a href="mailto:kaimi@purplemaia.org">kaimi@purplemaia.org</a>.</p>
       </div>
 
       <form id="interest-form" class="form" action="https://formspree.io/f/xvkgydze" method="POST" data-fallback-email="kaimi@purplemaia.org">
-        <input type="hidden" name="_subject" value="Express interest — Hawaiʻi Co-op Hui">
+        <input type="hidden" name="_subject" value="Mailing list signup — Hawaiʻi Co-op Hui">
         <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
 
         <div class="field">
@@ -308,20 +308,20 @@
           <input id="f-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
         </div>
         <div class="field field--full">
-          <label for="f-message">Tell us a little more</label>
-          <textarea id="f-message" name="message" placeholder="What you're working on, questions you have, or what you'd hope to get out of the cohort. A sentence or two is plenty."></textarea>
+          <label for="f-message">Tell us a little more <span class="opt">(optional)</span></label>
+          <textarea id="f-message" name="message" placeholder="What you're working on, or the kinds of programs and events you'd like to see."></textarea>
         </div>
 
         <p class="form__status" role="alert" hidden></p>
         <div class="form__foot">
-          <button class="btn btn--dark" type="submit">Express interest <span class="arw">&rarr;</span></button>
-          <p class="form__privacy">We'll use this to reach you about the Hui and the cohort. We won't sell it or share it for anything else.</p>
+          <button class="btn btn--dark" type="submit">Join the mailing list <span class="arw">&rarr;</span></button>
+          <p class="form__privacy">We'll only use this to share Hui programs and events. We won't sell or share it, and you can ask to come off the list anytime.</p>
         </div>
       </form>
 
       <div id="interest-success" class="form__success" hidden>
-        <h3>Mahalo — we got it.</h3>
-        <p>We'll be in touch as cohort details take shape. In the meantime, the readings and session recordings on the <a href="resources.html">Resources</a> page are a good place to start. E kahe ka wai.</p>
+        <h3>Mahalo, you're on the list.</h3>
+        <p>We'll share upcoming co-op programs and events as they come together. In the meantime, the session recordings on the <a href="resources.html">Resources</a> page are a good place to start. E kahe ka wai.</p>
       </div>
     </div>
   </section>
@@ -344,6 +344,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=20261028h"></script>
+<script src="script.js?v=20261102a"></script>
 </body>
 </html>

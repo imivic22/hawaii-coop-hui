@@ -126,7 +126,7 @@ p{margin:0}
 
 /* ---------- Hero ---------- */
 /* Text on the left; the full-color emblem with its cream outline in the middle, as tall as the
-   headline-to-button block; LEARN / CONNECT / BUILD stacked on the right. */
+   headline-to-button block; the six values stacked on the right. */
 .hero{position:relative;color:var(--on-forest);isolation:isolate;overflow:hidden;display:flex;flex-direction:column;
   --h1:clamp(2.6rem,5vw,4.6rem);
   --logo-w:clamp(260px, 33vw, 410px);                           /* width of the middle column */
@@ -155,11 +155,12 @@ p{margin:0}
 .hero__logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;
   filter:drop-shadow(0 12px 30px rgba(9,28,29,.22))}
 
-/* Learn / Connect / Build, stacked on the right and spread from the top of the headline to the bottom of the button */
+/* values, stacked on the right and spread from the top of the headline to the bottom of the button */
 .hero__values{list-style:none;padding:0;grid-column:3;grid-row:2;align-self:stretch;justify-self:end;text-align:right;
-  display:flex;flex-direction:column;justify-content:space-between;font-size:clamp(1.9rem,3.4vw,2.9rem);
-  /* optical alignment: the first word's cap top meets the headline's, the last word's baseline the button's bottom */
-  margin:0 0 -.23em}
+  display:flex;flex-direction:column;justify-content:space-between;font-size:clamp(1.6rem,3vw,2.6rem);
+  /* optical alignment: the macron over Ā meets the one over the headline's Ū, and the last
+     word's baseline meets the bottom of the button */
+  margin:calc(var(--h1) * -.11 + .05em) 0 -.23em}
 .hero__values li{font-family:var(--font-display-2);font-size:inherit;line-height:1;letter-spacing:.14em;color:var(--cream)}
 
 @media (max-width:900px){
@@ -170,19 +171,15 @@ p{margin:0}
   .hero__sub{margin-inline:auto}
   .hero__logo{align-self:auto;margin:0;width:min(64vw,280px)}
   .hero__logo img{position:static;height:auto}
-  /* one centered row, with a small dot centered in each gap between the words */
-  .hero__values{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:0 1.7em;align-self:auto;justify-self:stretch;text-align:center;width:100%;margin:0 auto;font-size:1.25rem}
-  .hero__values li{position:relative;padding:8px 0;letter-spacing:.12em}
-  .hero__values li+li::before{content:"";position:absolute;left:-.85em;top:50%;width:5px;height:5px;
+  /* values: a centered 3 × 2 grid with small dots between the words in each row */
+  .hero__values{display:grid;height:auto;justify-self:stretch;text-align:center;grid-template-columns:repeat(3,1fr);gap:0;width:100%;max-width:440px;margin:0 auto}
+  .hero__values li{position:relative;padding:8px 4px;font-size:1.05rem;letter-spacing:.12em}
+  .hero__values li:not(:nth-child(3n+1))::before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;
     border-radius:50%;background:#f0c39c;opacity:.75;transform:translate(-50%,-50%)}
 }
 @media (max-width:420px){
   .hero h1{font-size:clamp(2.7rem,14vw,3.4rem)}
-}
-@media (max-width:359.98px){                                   /* small phones: keep the three words on one line */
-  .hero__values{font-size:1.02rem;gap:0 1.2em}
-  .hero__values li{letter-spacing:.08em}
-  .hero__values li+li::before{left:-.6em}
+  .hero__values li{font-size:.95rem;letter-spacing:.1em}
 }
 
 /* ---------- Statement + waves ---------- */

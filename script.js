@@ -53,7 +53,9 @@
 
 // Mailing list form — posts to Formspree in the background and shows an inline
 // success state. Until a real Formspree ID is set on the form's action, the button
-// falls back to a prefilled email so it still works.
+// falls back to a prefilled email so it still works. When the form has a
+// data-sheet-url (the Hui's Google Apps Script web app), each signup is also added
+// to the shared Google Sheet, which emails the team.
 (function () {
   var form = document.getElementById('interest-form');
   if (!form) return;
@@ -88,9 +90,16 @@
     e.preventDefault();
     btn.disabled = true;
     status.hidden = true;
-    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
-      .then(function (r) {
-        if (!r.ok) throw new Error('HTTP ' + r.status);
+    var data = new FormData(form);
+    var sheetUrl = form.getAttribute('data-sheet-url');
+    var sends = [fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })];
+    if (sheetUrl) sends.push(fetch(sheetUrl, { method: 'POST', body: new URLSearchParams(data) }));
+    // Either one getting through counts, so a hiccup on one side never asks people to sign up twice.
+    Promise.all(sends.map(function (p) {
+      return p.then(function (r) { return r.ok; }, function () { return false; });
+    }))
+      .then(function (oks) {
+        if (oks.indexOf(true) === -1) throw new Error('not sent');
         form.hidden = true;
         success.hidden = false;
         success.setAttribute('tabindex', '-1');

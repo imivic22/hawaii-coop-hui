@@ -74,6 +74,13 @@ notifications to kaimi@purplemaia.org). Handler in `script.js`: background submi
 "Mahalo" state, honeypot (`_gotcha`), and a mailto fallback if the action is ever unset.
 Formspree emails an ownership confirmation on the very first submission — confirm it once.
 
+**Shared Google Sheet.** Each signup is also posted to a Google Apps Script web app bound to the Hui's
+"Mailing list" Google Sheet (shared with the team). It adds a row on the *Signups* tab and emails the
+program lead. The web app URL goes in `data-sheet-url` on `#interest-form` in `index.html`; when it's
+empty, only Formspree is used. The script source is kept locally in `apps-script/mailing-list.gs`
+(gitignored, because it holds team email addresses). To change who gets the email, edit `NOTIFY_TO`
+in the Apps Script editor and use Deploy → Manage deployments → Edit → New version.
+
 **Open for team sign-off before wider promotion:**
 1. Audience scope — copy says farmers, ranchers, growers; add fishers / value-added food makers if in scope.
 2. Solidarity-economy framing — confirm the Hui identifies with it (lead currently says "a name many people use").

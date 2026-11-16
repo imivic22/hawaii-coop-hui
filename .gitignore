@@ -15,3 +15,6 @@ drafts/
 
 # Temporary measuring/screenshot pages made during reviews (never publish)
 _*.html
+
+# Google Apps Script for the mailing-list sheet (has team email addresses, so not published)
+apps-script/
